@@ -673,6 +673,66 @@
       background: #fbfcff;
     }
 
+    .viz-panel {
+      margin-top: 14px;
+      padding: 16px;
+      border: 1px solid #bfdbfe;
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      background: #eff6ff;
+    }
+
+    .viz-panel.green {
+      border-color: #bbf7d0;
+      border-left-color: var(--green);
+      background: #f0fdf4;
+    }
+
+    .viz-panel.amber {
+      border-color: #fde68a;
+      border-left-color: var(--amber);
+      background: #fffbeb;
+    }
+
+    .chart-choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chart-choice {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      color: #475569;
+      font-size: 12px;
+    }
+
+    .chart-choice strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .external-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .external-link {
+      display: block;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      font-weight: 700;
+    }
+
     .diagram-title {
       margin: 0 0 10px;
       color: var(--ink);
@@ -881,6 +941,8 @@
       .reader-content,
       .two-col,
       .grid,
+      .chart-choice-grid,
+      .external-links,
       .flash-grid {
         grid-template-columns: 1fr;
       }
@@ -889,6 +951,8 @@
       .process-row,
       .term-grid,
       .smart-grid,
+      .chart-choice-grid,
+      .external-links,
       .flow-diagram,
       .stakeholder-map,
       .formula-strip { grid-template-columns: repeat(2, 1fr); }
@@ -908,6 +972,8 @@
       .process-row,
       .term-grid,
       .smart-grid,
+      .chart-choice-grid,
+      .external-links,
       .flow-diagram,
       .stakeholder-map,
       .formula-strip { grid-template-columns: 1fr; }
@@ -931,10 +997,10 @@
         <a class="course-pill active" href="#course-3-reader"><span class="course-index">3</span><span>Prepare Data for Exploration</span><span class="tag">live</span></a>
         <a class="course-pill active" href="#course-4-reader"><span class="course-index">4</span><span>Process Data from Dirty to Clean</span><span class="tag">live</span></a>
         <a class="course-pill active" href="#course-5-reader"><span class="course-index">5</span><span>Analyze Data to Answer Questions</span><span class="tag">live</span></a>
-        <div class="course-pill"><span class="course-index">6</span><span>Course 6 resource slot</span><span class="tag">soon</span></div>
-        <div class="course-pill"><span class="course-index">7</span><span>Course 7 resource slot</span><span class="tag">soon</span></div>
-        <div class="course-pill"><span class="course-index">8</span><span>Course 8 resource slot</span><span class="tag">soon</span></div>
-        <div class="course-pill"><span class="course-index">9</span><span>Course 9 resource slot</span><span class="tag">soon</span></div>
+        <a class="course-pill active" href="#course-6-reader"><span class="course-index">6</span><span>Share Data Through the Art of Visualization</span><span class="tag">live</span></a>
+        <a class="course-pill active" href="#course-7-reader"><span class="course-index">7</span><span>Introduction to Data Analysis Using Python</span><span class="tag">live</span></a>
+        <a class="course-pill active" href="#course-8-reader"><span class="course-index">8</span><span>Google Data Analytics Capstone</span><span class="tag">live</span></a>
+        <a class="course-pill active" href="#course-9-reader"><span class="course-index">9</span><span>Accelerate Your Job Search with AI</span><span class="tag">live</span></a>
       </div>
 
       <nav aria-label="Page sections">
@@ -945,6 +1011,10 @@
         <a href="#course-3-reader">Course 3 reader</a>
         <a href="#course-4-reader">Course 4 reader</a>
         <a href="#course-5-reader">Course 5 reader</a>
+        <a href="#course-6-reader">Course 6 reader</a>
+        <a href="#course-7-reader">Course 7 reader</a>
+        <a href="#course-8-reader">Course 8 reader</a>
+        <a href="#course-9-reader">Course 9 reader</a>
         <a href="#resources">Coursera resource tabs</a>
         <a href="#flashcards">Flashcards</a>
         <a href="#practice">Practice prompts</a>
@@ -955,24 +1025,24 @@
     <main>
       <section class="hero" id="overview">
         <div class="hero-copy">
-          <h2>Revise Course 1 as a data analyst, not as a video watcher.</h2>
-          <p>This page turns your completed Coursera course into a working revision desk: complete reading material, transcript-informed summaries, active recall prompts, and progress you can mark as you revise. Coursera links stay available only as backup references.</p>
+          <h2>Revise the full certificate as a data analyst, not as a video watcher.</h2>
+          <p>This page turns the Google Data Analytics Professional Certificate into a working revision desk: course-by-course reading material, diagrams, visualization guidance, external references, active recall prompts, and Coursera links kept separately as backup sources.</p>
           <div class="hero-actions">
             <a class="button primary" href="https://www.coursera.org/learn/foundations-data/home/module/1" target="_blank" rel="noreferrer">Open Coursera course</a>
-            <a class="button" href="#modules">Start revision</a>
+            <a class="button" href="#course-reader">Start revision</a>
           </div>
         </div>
 
         <div class="dashboard-panel" aria-label="Course status">
           <div>
-            <strong>Course 1</strong>
-            <p style="margin: 6px 0 0; color: var(--muted);">Foundations: Data, Data, Everywhere</p>
+            <strong>Certificate Hub</strong>
+            <p style="margin: 6px 0 0; color: var(--muted);">9 courses now mapped into one revision system</p>
           </div>
           <div class="metric-grid">
-            <div class="metric"><strong>4</strong><span>modules</span></div>
-            <div class="metric"><strong>85</strong><span>mapped items</span></div>
-            <div class="metric"><strong>36</strong><span>video lessons</span></div>
-            <div class="metric"><strong>22</strong><span>revision cards</span></div>
+            <div class="metric"><strong>9</strong><span>courses</span></div>
+            <div class="metric"><strong>66</strong><span>flashcards</span></div>
+            <div class="metric"><strong>64</strong><span>practice prompts</span></div>
+            <div class="metric"><strong>20+</strong><span>external links</span></div>
           </div>
           <div>
             <div style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; color: var(--muted); font-size: 13px;">
@@ -2429,6 +2499,640 @@
         </div>
       </section>
 
+      <section id="course-6-reader">
+        <div class="section-title">
+          <div>
+            <h2>Course 6 Reader</h2>
+            <p>Share Data Through the Art of Visualization. This is the main communication course: choose the right visual, design it clearly, build dashboards, tell a data story, and present findings with confidence.</p>
+          </div>
+        </div>
+
+        <div class="reader">
+          <article class="reader-module">
+            <header>
+              <h3>Module 1: Visualize Data</h3>
+              <p>Goal: understand why visuals work, how to choose chart types, and how design choices affect interpretation.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Why Visualization Matters</h4>
+                  <p>Visualization turns analysis into something people can see, compare, question, and remember. A good visual reduces cognitive load: it helps the audience notice the pattern without forcing them to inspect every row. A bad visual can mislead through the wrong chart type, missing labels, distorted scales, clutter, or color choices that hide the point.</p>
+                  <div class="viz-panel">
+                    <strong>Analyst rule:</strong> never start with "which chart looks good?" Start with "what comparison does the audience need to make?"
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>2. Chart Choice Map</h4>
+                  <p>Chart selection depends on the analytical task. Use position and length for precise comparison, lines for trends, bars for ranked categories, scatter plots for relationships, maps for geography, and tables when exact values matter more than patterns.</p>
+                  <div class="chart-choice-grid">
+                    <div class="chart-choice"><strong>Compare categories</strong>Bar chart, grouped bar, dot plot.</div>
+                    <div class="chart-choice"><strong>Show change over time</strong>Line chart, area chart, slope chart.</div>
+                    <div class="chart-choice"><strong>Show relationship</strong>Scatter plot, bubble chart, correlation view.</div>
+                    <div class="chart-choice"><strong>Show composition</strong>Stacked bar, 100% stacked bar, treemap when categories are many.</div>
+                    <div class="chart-choice"><strong>Show distribution</strong>Histogram, box plot, violin plot.</div>
+                    <div class="chart-choice"><strong>Show exact lookup</strong>Table with conditional formatting.</div>
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>3. Design Principles</h4>
+                  <p>Effective visuals use hierarchy, contrast, alignment, proximity, repetition, and white space. Remove decoration that does not explain the data. Use direct labels where possible, write a title that states the takeaway, and make the most important mark visually obvious.</p>
+                  <div class="diagram">
+                    <p class="diagram-title">Diagram: Visualization Design Loop</p>
+                    <div class="flow-diagram">
+                      <div class="flow-cell"><strong>Question</strong>What decision or understanding should the chart support?</div>
+                      <div class="flow-cell"><strong>Encoding</strong>Which visual channel best shows the comparison?</div>
+                      <div class="flow-cell"><strong>Declutter</strong>Remove noise, weak labels, and decorative elements.</div>
+                      <div class="flow-cell"><strong>Check</strong>Can the audience understand the point in seconds?</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>4. Color, Accessibility, And Ethics</h4>
+                  <p>Color should carry meaning, not decoration. Use one accent color to highlight the key point, neutral colors for context, and accessible contrast for readability. Avoid red/green-only meaning because many people cannot distinguish it reliably. Always keep scales honest and include uncertainty or limitations when the visual could overstate confidence.</p>
+                  <div class="viz-panel amber">
+                    <strong>Color habit:</strong> use blue for focus, gray for comparison, green for positive status, amber for caution, and red only for real risk or error.
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>5. Correlation, Causation, And Limits</h4>
+                  <p>Charts often reveal relationships, but a relationship is not proof of cause. When presenting a correlation, explain what the chart shows, what it does not prove, what other variables might matter, and what follow-up analysis would strengthen the claim.</p>
+                </div>
+
+                <div class="reader-block">
+                  <h4>External Visualization Toolkit</h4>
+                  <div class="external-links">
+                    <a class="external-link" href="https://www.data-to-viz.com/" target="_blank" rel="noreferrer">Data to Viz: chart selection guide</a>
+                    <a class="external-link" href="https://datavizcatalogue.com/" target="_blank" rel="noreferrer">Data Viz Catalogue: chart library</a>
+                    <a class="external-link" href="https://www.storytellingwithdata.com/chart-guide" target="_blank" rel="noreferrer">Storytelling with Data chart guide</a>
+                    <a class="external-link" href="https://colorbrewer2.org/" target="_blank" rel="noreferrer">ColorBrewer: map and chart palettes</a>
+                    <a class="external-link" href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noreferrer">WCAG quick reference</a>
+                    <a class="external-link" href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noreferrer">WebAIM contrast checker</a>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 1 Checklist</h4>
+                <ul>
+                  <li>Choose charts by comparison task.</li>
+                  <li>Use titles that state the insight.</li>
+                  <li>Remove non-data clutter.</li>
+                  <li>Check color contrast and accessibility.</li>
+                  <li>Do not imply causation from correlation.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 2: Create Visualizations With Tableau</h3>
+              <p>Goal: understand Tableau as a visualization and dashboard tool, and know how analysts structure Tableau work.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Tableau Mental Model</h4>
+                  <p>Tableau connects to data, reads fields as dimensions and measures, and lets you build views by dragging fields into shelves. Dimensions usually segment data; measures are numeric values that can be aggregated. The analyst's job is to select fields intentionally and check whether Tableau's automatic aggregation matches the question.</p>
+                  <div class="diagram">
+                    <p class="diagram-title">Diagram: Tableau Build Path</p>
+                    <div class="flow-diagram">
+                      <div class="flow-cell"><strong>Connect</strong>Load data and inspect fields.</div>
+                      <div class="flow-cell"><strong>Build</strong>Place dimensions and measures into a view.</div>
+                      <div class="flow-cell"><strong>Filter</strong>Limit data to the relevant scope.</div>
+                      <div class="flow-cell"><strong>Dashboard</strong>Combine views into an interactive decision surface.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>2. Dashboards</h4>
+                  <p>A dashboard combines visuals so users can monitor, compare, and investigate. Good dashboards have a clear purpose, a predictable layout, consistent filters, limited color vocabulary, and enough context to understand the numbers. Avoid turning a dashboard into a chart museum.</p>
+                  <div class="viz-panel green">
+                    <strong>Dashboard structure:</strong> headline KPI first, trend second, driver breakdown third, detail table last.
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>3. Filters And Interactivity</h4>
+                  <p>Filters let viewers explore by date, region, category, customer segment, or other dimensions. Interactivity should answer predictable follow-up questions, not create confusion. Every filter should have a reason, a visible state, and a sensible default.</p>
+                </div>
+
+                <div class="reader-block">
+                  <h4>Tableau References</h4>
+                  <div class="external-links">
+                    <a class="external-link" href="https://help.tableau.com/current/pro/desktop/en-us/getstarted_overview.htm" target="_blank" rel="noreferrer">Tableau Desktop getting started</a>
+                    <a class="external-link" href="https://help.tableau.com/current/pro/desktop/en-us/dimensions_measures.htm" target="_blank" rel="noreferrer">Tableau dimensions and measures</a>
+                    <a class="external-link" href="https://help.tableau.com/current/pro/desktop/en-us/dashboards.htm" target="_blank" rel="noreferrer">Tableau dashboard help</a>
+                    <a class="external-link" href="https://public.tableau.com/app/discover" target="_blank" rel="noreferrer">Tableau Public gallery</a>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 2 Checklist</h4>
+                <ul>
+                  <li>Explain dimensions and measures.</li>
+                  <li>Check aggregations before trusting a chart.</li>
+                  <li>Build dashboards around user decisions.</li>
+                  <li>Use filters only when they help exploration.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 3: Craft Data Stories</h3>
+              <p>Goal: connect visuals into a narrative that moves from context to insight to action.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Data Story Structure</h4>
+                  <p>A data story is not decoration around charts. It is the explanation of what changed, why it matters, and what should happen next. A strong story has context, conflict or tension, evidence, insight, recommendation, and next action.</p>
+                  <div class="diagram">
+                    <p class="diagram-title">Diagram: Data Story Arc</p>
+                    <div class="flow-diagram">
+                      <div class="flow-cell"><strong>Context</strong>What business situation are we in?</div>
+                      <div class="flow-cell"><strong>Finding</strong>What pattern did the data reveal?</div>
+                      <div class="flow-cell"><strong>Meaning</strong>Why does this matter to the audience?</div>
+                      <div class="flow-cell"><strong>Action</strong>What decision or next step follows?</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reader-block">
+                  <h4>2. Audience Fit</h4>
+                  <p>Executives need the decision and risk. Managers need drivers and tradeoffs. Technical peers need definitions, filters, logic, and reproducibility. Adjust detail level, language, and visual density to the audience's job.</p>
+                </div>
+
+                <div class="reader-block">
+                  <h4>3. Live And Static Insights</h4>
+                  <p>Static visuals are useful for a fixed story, such as a slide or report. Live dashboards are useful when stakeholders need recurring monitoring or exploration. Choose static when the answer is stable; choose live when the user needs to ask follow-up questions repeatedly.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 3 Checklist</h4>
+                <ul>
+                  <li>State the business context first.</li>
+                  <li>Lead with insight, not chart mechanics.</li>
+                  <li>Match detail to audience.</li>
+                  <li>End with action and caveats.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 4: Develop Presentations And Slideshows</h3>
+              <p>Goal: turn analysis into a polished presentation with clear slides, limitations, and strong Q&A handling.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Presentation Framework</h4>
+                  <p>A strong presentation uses the same logic as analysis: ask, prepare, process, analyze, share, and act. The difference is that the audience sees only the final story. Slides should be selective, readable, and sequenced so each slide earns its place.</p>
+                </div>
+
+                <div class="reader-block">
+                  <h4>2. Slide Design</h4>
+                  <p>Use one main idea per slide. Put the takeaway in the title, keep charts large, use short labels, and remove unnecessary borders, legends, and decoration. If a slide requires a long explanation before the chart makes sense, redesign it.</p>
+                </div>
+
+                <div class="reader-block">
+                  <h4>3. Caveats, Limitations, And Q&A</h4>
+                  <p>Professional analysts do not hide limitations. They explain sample limits, missing data, assumptions, possible bias, and confidence level. In Q&A, listen fully, answer what you know, name uncertainty honestly, and offer a follow-up when deeper analysis is needed.</p>
+                  <div class="viz-panel amber">
+                    <strong>Q&A habit:</strong> separate facts from interpretation. Say "the data shows..." before "my recommendation is..."
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 4 Checklist</h4>
+                <ul>
+                  <li>Use action-title slides.</li>
+                  <li>Keep one idea per slide.</li>
+                  <li>Prepare caveats before presenting.</li>
+                  <li>Handle objections with evidence and calm.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="course-7-reader">
+        <div class="section-title">
+          <div>
+            <h2>Course 7 Reader</h2>
+            <p>Introduction to Data Analysis Using Python. This course introduces Python as the programming layer for repeatable data work: syntax, variables, data types, functions, control flow, strings, lists, dictionaries, NumPy, and pandas.</p>
+          </div>
+        </div>
+
+        <div class="reader">
+          <article class="reader-module">
+            <header>
+              <h3>Module 1: Get Started With Python</h3>
+              <p>Goal: understand where Python fits in the analyst toolkit and how notebooks support analysis.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Why Python For Analysis</h4>
+                  <p>Python is useful when work needs to be repeatable, programmable, scalable, and shareable. Spreadsheets are fast for manual exploration, SQL is strong for querying databases, and Python is strong for flexible analysis, automation, data cleaning, and reusable workflows.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Jupyter Notebooks</h4>
+                  <p>A notebook mixes code, output, notes, and charts. Use markdown cells to explain intent and code cells to run analysis. A good notebook reads like a transparent analysis record, not a pile of disconnected commands.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>3. Variables And Data Types</h4>
+                  <p>Variables store values. Common types include strings, integers, floats, Booleans, lists, dictionaries, and dataframes. Use clear variable names that describe meaning, not vague names such as x or data2.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 1 Checklist</h4>
+                <ul>
+                  <li>Explain Python's role beside spreadsheets and SQL.</li>
+                  <li>Use notebooks for code plus explanation.</li>
+                  <li>Name variables clearly.</li>
+                  <li>Recognize core data types.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 2: Python Building Blocks</h3>
+              <p>Goal: write basic Python logic with functions, conditions, loops, and reusable code.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Syntax And Semantics</h4>
+                  <p>Syntax is the grammar Python requires; semantics is the meaning of the code. Indentation matters. Small syntax errors can stop code; semantic errors can run but produce the wrong answer, which is more dangerous in analysis.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Conditions And Loops</h4>
+                  <p>Conditional statements choose different actions based on rules. Loops repeat a task across values. Analysts use them to classify records, clean repeated fields, calculate values, or automate checks.</p>
+                  <div class="formula-strip">
+                    <div class="formula">if condition:</div>
+                    <div class="formula">for item in list:</div>
+                    <div class="formula">while condition:</div>
+                    <div class="formula">return result</div>
+                  </div>
+                </div>
+                <div class="reader-block">
+                  <h4>3. Functions</h4>
+                  <p>A function packages repeatable logic behind a clear name. Good functions have one purpose, clear inputs, and predictable output. For analysis, functions reduce copy-paste errors and make cleaning logic easier to test.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 2 Checklist</h4>
+                <ul>
+                  <li>Distinguish syntax errors from logic errors.</li>
+                  <li>Use conditions for decisions.</li>
+                  <li>Use loops for repetition.</li>
+                  <li>Write small reusable functions.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 3: Data Structures And Strings</h3>
+              <p>Goal: store, organize, and manipulate values using strings, lists, dictionaries, and structured collections.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Strings</h4>
+                  <p>Strings store text. Analysts use string methods to standardize case, trim spaces, split fields, search for patterns, and create labels. Always check whether an ID should stay as text even when it contains digits.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Lists And Dictionaries</h4>
+                  <p>Lists store ordered values. Dictionaries store key-value pairs. Lists are useful for collections such as column names; dictionaries are useful for mappings such as region codes to region names.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>3. NumPy And Pandas</h4>
+                  <p>NumPy supports fast numerical work. Pandas provides DataFrames, which feel like programmable tables. In pandas, analysts filter rows, select columns, group data, join tables, handle missing values, and create new calculated fields.</p>
+                  <div class="external-links">
+                    <a class="external-link" href="https://docs.python.org/3/tutorial/" target="_blank" rel="noreferrer">Python official tutorial</a>
+                    <a class="external-link" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/" target="_blank" rel="noreferrer">Pandas intro tutorials</a>
+                    <a class="external-link" href="https://numpy.org/doc/stable/user/absolute_beginners.html" target="_blank" rel="noreferrer">NumPy for beginners</a>
+                    <a class="external-link" href="https://jupyter.org/try" target="_blank" rel="noreferrer">Try Jupyter</a>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 3 Checklist</h4>
+                <ul>
+                  <li>Clean text with string methods.</li>
+                  <li>Use lists for ordered groups.</li>
+                  <li>Use dictionaries for mappings.</li>
+                  <li>Understand DataFrames as programmable tables.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 4: Apply Python To Data Analysis</h3>
+              <p>Goal: connect Python basics to a practical analysis workflow.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Python Analysis Workflow</h4>
+                  <div class="diagram">
+                    <p class="diagram-title">Diagram: Python Analysis Workflow</p>
+                    <div class="flow-diagram">
+                      <div class="flow-cell"><strong>Import</strong>Read CSV, Excel, or database output.</div>
+                      <div class="flow-cell"><strong>Inspect</strong>Check shape, columns, types, nulls.</div>
+                      <div class="flow-cell"><strong>Transform</strong>Filter, group, join, calculate.</div>
+                      <div class="flow-cell"><strong>Share</strong>Export tables, charts, and explanations.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Practical Habits</h4>
+                  <p>Keep notebooks readable, comment only where logic is not obvious, validate outputs after each transformation, and avoid overwriting important raw data. Python helps most when the analysis can be rerun from top to bottom.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 4 Checklist</h4>
+                <ul>
+                  <li>Import and inspect data before transforming.</li>
+                  <li>Validate each step.</li>
+                  <li>Keep code readable and reproducible.</li>
+                  <li>Export results for presentation or portfolio use.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="course-8-reader">
+        <div class="section-title">
+          <div>
+            <h2>Course 8 Reader</h2>
+            <p>Google Data Analytics Capstone: Complete a Case Study. This course turns the certificate into portfolio evidence by guiding you through a complete case study.</p>
+          </div>
+        </div>
+
+        <div class="reader">
+          <article class="reader-module">
+            <header>
+              <h3>Module 1: Learn About Capstone Basics</h3>
+              <p>Goal: understand case studies, portfolios, and what employers look for.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. What A Case Study Proves</h4>
+                  <p>A case study proves that you can move through the full analysis process: ask a focused question, prepare and clean data, analyze evidence, visualize results, and recommend action. It should show decisions and reasoning, not just final charts.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Portfolio Checklist</h4>
+                  <div class="smart-grid">
+                    <div class="smart-cell"><strong>Question</strong>Clear business task.</div>
+                    <div class="smart-cell"><strong>Data</strong>Source, fields, limits.</div>
+                    <div class="smart-cell"><strong>Process</strong>Cleaning and analysis steps.</div>
+                    <div class="smart-cell"><strong>Visuals</strong>Evidence and story.</div>
+                    <div class="smart-cell"><strong>Action</strong>Recommendation and next step.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 1 Checklist</h4>
+                <ul>
+                  <li>Choose a case study scenario.</li>
+                  <li>Define the business task.</li>
+                  <li>Plan portfolio evidence.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 2: Optional Build Your Portfolio</h3>
+              <p>Goal: complete a case study track and publish it in a portfolio-ready form.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Track A Or Track B</h4>
+                  <p>Track A uses provided business cases. Track B lets you choose a public dataset and build your own business case. Track A is faster; Track B can be more personally meaningful. Either way, the final case study should be clear enough for a recruiter to skim.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Case Study Deliverable</h4>
+                  <p>Write a concise report with sections for scenario, business task, data source, tools, cleaning, analysis, visualizations, recommendations, and limitations. Include links to code, dashboard, spreadsheet, or notebook if available.</p>
+                  <div class="external-links">
+                    <a class="external-link" href="https://www.kaggle.com/datasets" target="_blank" rel="noreferrer">Kaggle datasets</a>
+                    <a class="external-link" href="https://datasetsearch.research.google.com/" target="_blank" rel="noreferrer">Google Dataset Search</a>
+                    <a class="external-link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub portfolio hosting</a>
+                    <a class="external-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 2 Checklist</h4>
+                <ul>
+                  <li>Choose dataset and tools.</li>
+                  <li>Document cleaning and analysis.</li>
+                  <li>Publish a readable case study.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 3: Optional Use Your Portfolio</h3>
+              <p>Goal: explain your case study in interviews and highlight your analytical strengths.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Interview Story</h4>
+                  <p>Prepare a short case study explanation: the business problem, the data, the hard part, your method, your result, and what you would do next. Employers want to hear how you think, not only which tool you used.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Elevator Pitch</h4>
+                  <p>Use one paragraph: "I analyzed X data to answer Y question. I cleaned and prepared the data using Z tools, found A pattern, and recommended B action. This project shows my ability to move from raw data to business recommendation."</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 3 Checklist</h4>
+                <ul>
+                  <li>Prepare a 60-second case study pitch.</li>
+                  <li>Connect tools to business outcomes.</li>
+                  <li>Practice answering limitation questions.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 4: Put Your Certificate To Work</h3>
+              <p>Goal: connect the certificate, badge, portfolio, and job search materials.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Professional Packaging</h4>
+                  <p>After the capstone, your next task is packaging: resume bullet, LinkedIn feature, GitHub or Kaggle link, and a short explanation of your case study. Keep the portfolio easy to open and easy to understand.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. AI Support With Judgment</h4>
+                  <p>Use AI to brainstorm questions, check formulas, explain errors, outline reports, and improve wording. Do not let AI invent findings, hide limitations, or replace your own validation.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 4 Checklist</h4>
+                <ul>
+                  <li>Add certificate and case study to LinkedIn.</li>
+                  <li>Update resume with project evidence.</li>
+                  <li>Keep portfolio links working.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="course-9-reader">
+        <div class="section-title">
+          <div>
+            <h2>Course 9 Reader</h2>
+            <p>Accelerate Your Job Search with AI. This course supports the transition from learning to job search: skill discovery, application tracking, resume work, networking, and interview practice with AI tools.</p>
+          </div>
+        </div>
+
+        <div class="reader">
+          <article class="reader-module">
+            <header>
+              <h3>Module 1: Uncover Skills And Career Direction</h3>
+              <p>Goal: identify your transferable skills, target roles, and career path.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Skill Inventory</h4>
+                  <p>List skills from the certificate: spreadsheets, SQL, Python, Tableau, data cleaning, dashboards, storytelling, analysis, documentation, and portfolio building. Match those skills to job descriptions to find role fit and gaps.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. AI For Exploration</h4>
+                  <p>AI can help compare roles, rewrite experience into skill language, and generate learning plans. Treat it as a thinking partner: verify role requirements from real job postings.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 1 Checklist</h4>
+                <ul>
+                  <li>Create a skill inventory.</li>
+                  <li>Choose target roles.</li>
+                  <li>Identify gaps to close.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 2: Organize Applications</h3>
+              <p>Goal: use a tracker to manage job leads, applications, networking, and follow-ups.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Application Tracker</h4>
+                  <p>A simple tracker should include company, role, link, date applied, status, contact, follow-up date, resume version, notes, and next action. This prevents missed opportunities and helps you learn which applications get responses.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 2 Checklist</h4>
+                <ul>
+                  <li>Create a Google Sheets tracker.</li>
+                  <li>Log every application.</li>
+                  <li>Schedule follow-ups.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 3: Resume And Job Search Plan</h3>
+              <p>Goal: build a focused resume and practical weekly job search system.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Resume With Evidence</h4>
+                  <p>Use project bullets that show task, tool, action, and outcome. A strong bullet is specific: "Analyzed 12 months of bike-share trip data with SQL and Tableau to identify member conversion opportunities."</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. Weekly Plan</h4>
+                  <p>Reserve time for applications, networking, portfolio improvement, interview practice, and skill building. Track the process like an analytics funnel: applications sent, responses, interviews, offers, and blockers.</p>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 3 Checklist</h4>
+                <ul>
+                  <li>Tailor resume to target roles.</li>
+                  <li>Use measurable project bullets.</li>
+                  <li>Plan weekly outreach and practice.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>Module 4: Interview Practice With AI</h3>
+              <p>Goal: practice behavioral and technical interview responses using AI tools while keeping answers honest.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>1. Interview Response Framework</h4>
+                  <p>Use STAR for behavioral answers: situation, task, action, result. For technical answers, explain the business question, data, method, validation, result, and limitation. Practice until the answer sounds clear, not memorized.</p>
+                </div>
+                <div class="reader-block">
+                  <h4>2. AI Practice Prompts</h4>
+                  <p>Ask AI to play the role of interviewer, challenge your case study, ask follow-up questions, and score your clarity. Then revise the answer using your actual experience and project evidence.</p>
+                  <div class="external-links">
+                    <a class="external-link" href="https://gemini.google.com/" target="_blank" rel="noreferrer">Google Gemini</a>
+                    <a class="external-link" href="https://notebooklm.google/" target="_blank" rel="noreferrer">NotebookLM</a>
+                    <a class="external-link" href="https://www.linkedin.com/help/linkedin/answer/a507508" target="_blank" rel="noreferrer">LinkedIn profile help</a>
+                    <a class="external-link" href="https://www.coursera.org/career-academy" target="_blank" rel="noreferrer">Coursera Career Academy</a>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side">
+                <h4>Module 4 Checklist</h4>
+                <ul>
+                  <li>Practice STAR answers.</li>
+                  <li>Prepare case study walkthrough.</li>
+                  <li>Use AI for feedback, not fake experience.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="modules">
         <div class="section-title">
           <div>
@@ -2525,6 +3229,26 @@
           <li>Define a conversion-rate calculation, including numerator, denominator, and validation checks.</li>
           <li>Write a CASE statement idea that labels orders as "late" or "on time."</li>
           <li>List three checks before trusting a temporary table used in later analysis.</li>
+          <li>Choose the best chart for comparing monthly revenue across five regions, and explain why another chart type would be weaker.</li>
+          <li>Redesign a cluttered chart: list five elements you would remove or simplify.</li>
+          <li>Create an action-title for a chart showing that customer complaints rose 18% after a policy change.</li>
+          <li>Pick a color palette for a dashboard and explain which color is reserved for the key insight.</li>
+          <li>Explain the difference between correlation and causation using a scatter plot example.</li>
+          <li>Plan a Tableau dashboard with one KPI, one trend chart, one driver breakdown, and one detail table.</li>
+          <li>Write a three-part data story: context, finding, and recommendation.</li>
+          <li>Prepare a Q&A response for a stakeholder who says your sample size is too small.</li>
+          <li>Write a Python notebook outline for importing, inspecting, cleaning, analyzing, and exporting a dataset.</li>
+          <li>Create three clear Python variable names for a sales analysis project and explain why they are better than generic names.</li>
+          <li>Write pseudocode for a loop that checks whether each customer email is missing.</li>
+          <li>Explain when you would use a dictionary instead of a list in Python analysis.</li>
+          <li>Design a pandas workflow for filtering rows, grouping by region, and calculating average order value.</li>
+          <li>Write a capstone business task for a public dataset you would like to analyze.</li>
+          <li>Draft the section headings for a portfolio case study report.</li>
+          <li>Create a 60-second case study pitch using business task, data, method, finding, and recommendation.</li>
+          <li>Turn one certificate project into a resume bullet with tool, action, and outcome.</li>
+          <li>Create a job application tracker with at least eight columns.</li>
+          <li>Write a prompt you could give Gemini to practice a data analyst interview using your capstone project.</li>
+          <li>List three ways AI can help your job search and three things AI should not be allowed to invent.</li>
         </ol>
       </section>
 
@@ -3184,6 +3908,180 @@
       }
     ];
 
+    const course6Modules = [
+      {
+        id: 1,
+        title: "Visualize data",
+        summary: "Visualization purpose, chart choice, design principles, color, accessibility, and correlation limits.",
+        lessons: [
+          ["Course", "Coursera: Share Data Through the Art of Visualization", "course page", "https://www.coursera.org/learn/visualize-data"],
+          ["Reading", "Effective data visualizations", "Coursera module topic", "https://www.coursera.org/learn/visualize-data"],
+          ["Reading", "Correlation and causation", "Coursera module topic", "https://www.coursera.org/learn/visualize-data"],
+          ["External", "Data to Viz: chart selection guide", "external", "https://www.data-to-viz.com/"],
+          ["External", "Data Viz Catalogue", "external", "https://datavizcatalogue.com/"],
+          ["External", "Storytelling with Data chart guide", "external", "https://www.storytellingwithdata.com/chart-guide"],
+          ["External", "ColorBrewer palettes", "external", "https://colorbrewer2.org/"],
+          ["External", "WebAIM contrast checker", "external", "https://webaim.org/resources/contrastchecker/"],
+          ["External", "WCAG quick reference", "external", "https://www.w3.org/WAI/WCAG22/quickref/"]
+        ]
+      },
+      {
+        id: 2,
+        title: "Create visualizations with Tableau",
+        summary: "Tableau dimensions, measures, dashboards, filters, linked data, and effective interactive views.",
+        lessons: [
+          ["Course", "Coursera module: Tableau visualizations", "course page", "https://www.coursera.org/learn/visualize-data"],
+          ["External", "Tableau Desktop getting started", "external", "https://help.tableau.com/current/pro/desktop/en-us/getstarted_overview.htm"],
+          ["External", "Tableau dimensions and measures", "external", "https://help.tableau.com/current/pro/desktop/en-us/dimensions_measures.htm"],
+          ["External", "Tableau dashboards", "external", "https://help.tableau.com/current/pro/desktop/en-us/dashboards.htm"],
+          ["External", "Tableau Public gallery", "external", "https://public.tableau.com/app/discover"]
+        ]
+      },
+      {
+        id: 3,
+        title: "Craft data stories",
+        summary: "Audience, narrative structure, static vs live insights, Tableau dashboards, filters, and storytelling.",
+        lessons: [
+          ["Course", "Coursera module: Craft data stories", "course page", "https://www.coursera.org/learn/visualize-data"],
+          ["External", "Financial Times visual vocabulary", "external", "https://ft-interactive.github.io/visual-vocabulary/"],
+          ["External", "Observable Plot examples", "external", "https://observablehq.com/plot/gallery"],
+          ["External", "Nightingale data visualization articles", "external", "https://nightingaledvs.com/"]
+        ]
+      },
+      {
+        id: 4,
+        title: "Develop presentations and slideshows",
+        summary: "Presentation frameworks, slide design, caveats, limitations, Q&A, and stakeholder delivery.",
+        lessons: [
+          ["Course", "Coursera module: Develop presentations and slideshows", "course page", "https://www.coursera.org/learn/visualize-data"],
+          ["External", "Google Slides help", "external", "https://support.google.com/docs/topic/9054603"],
+          ["External", "Microsoft PowerPoint training", "external", "https://support.microsoft.com/en-us/powerpoint"],
+          ["External", "Presentation accessibility guidance", "external", "https://www.w3.org/WAI/teach-advocate/accessible-presentations/"]
+        ]
+      }
+    ];
+
+    const course7Modules = [
+      {
+        id: 1,
+        title: "Get started with Python",
+        summary: "Python's role in analytics, notebooks, variables, data types, and object-oriented thinking.",
+        lessons: [
+          ["Course", "Coursera: Introduction to Data Analysis Using Python", "course page", "https://www.coursera.org/learn/introduction-to-data-analysis-using-python"],
+          ["External", "Python official tutorial", "external", "https://docs.python.org/3/tutorial/"],
+          ["External", "Jupyter try page", "external", "https://jupyter.org/try"]
+        ]
+      },
+      {
+        id: 2,
+        title: "Python building blocks",
+        summary: "Syntax, semantics, functions, conditions, loops, reusable code, and analysis logic.",
+        lessons: [
+          ["External", "Python control flow", "external", "https://docs.python.org/3/tutorial/controlflow.html"],
+          ["External", "Python built-in data types", "external", "https://docs.python.org/3/library/stdtypes.html"]
+        ]
+      },
+      {
+        id: 3,
+        title: "Data structures and strings",
+        summary: "Strings, lists, dictionaries, NumPy, pandas, and dataframe thinking.",
+        lessons: [
+          ["External", "Pandas intro tutorials", "external", "https://pandas.pydata.org/docs/getting_started/intro_tutorials/"],
+          ["External", "NumPy for beginners", "external", "https://numpy.org/doc/stable/user/absolute_beginners.html"]
+        ]
+      },
+      {
+        id: 4,
+        title: "Apply Python to data analysis",
+        summary: "Import, inspect, transform, validate, and share results through repeatable Python workflows.",
+        lessons: [
+          ["External", "Pandas cookbook", "external", "https://pandas.pydata.org/docs/user_guide/cookbook.html"],
+          ["External", "Kaggle notebooks", "external", "https://www.kaggle.com/code"]
+        ]
+      }
+    ];
+
+    const course8Modules = [
+      {
+        id: 1,
+        title: "Learn about capstone basics",
+        summary: "Case studies, portfolios, employer expectations, and portfolio checklists.",
+        lessons: [
+          ["Course", "Coursera: Google Data Analytics Capstone", "course page", "https://www.coursera.org/learn/google-data-analytics-capstone"],
+          ["External", "Kaggle datasets", "external", "https://www.kaggle.com/datasets"],
+          ["External", "Google Dataset Search", "external", "https://datasetsearch.research.google.com/"]
+        ]
+      },
+      {
+        id: 2,
+        title: "Optional: Build your portfolio",
+        summary: "Choose a capstone track, build a case study, and publish work online.",
+        lessons: [
+          ["External", "GitHub", "external", "https://github.com/"],
+          ["External", "Tableau Public", "external", "https://public.tableau.com/"],
+          ["External", "Kaggle portfolios", "external", "https://www.kaggle.com/"]
+        ]
+      },
+      {
+        id: 3,
+        title: "Optional: Use your portfolio",
+        summary: "Discuss projects in interviews, build an elevator pitch, and communicate analytical thinking.",
+        lessons: [
+          ["External", "LinkedIn profile help", "external", "https://www.linkedin.com/help/linkedin/answer/a554351"],
+          ["External", "Google Interview Warmup", "external", "https://grow.google/certificates/interview-warmup/"]
+        ]
+      },
+      {
+        id: 4,
+        title: "Put your certificate to work",
+        summary: "Certificate badge, LinkedIn profile, resume evidence, AI support, and job search readiness.",
+        lessons: [
+          ["External", "Credly", "external", "https://www.credly.com/"],
+          ["External", "Coursera Career Academy", "external", "https://www.coursera.org/career-academy"]
+        ]
+      }
+    ];
+
+    const course9Modules = [
+      {
+        id: 1,
+        title: "Uncover skills and career direction",
+        summary: "Skill inventory, target roles, career exploration, and AI-supported planning.",
+        lessons: [
+          ["Course", "Coursera: Accelerate Your Job Search with AI", "course page", "https://www.coursera.org/learn/accelerate-your-job-search-with-ai"],
+          ["External", "Google Gemini", "external", "https://gemini.google.com/"],
+          ["External", "Google Career Dreamer", "external", "https://grow.google/career-dreamer/"]
+        ]
+      },
+      {
+        id: 2,
+        title: "Organize applications",
+        summary: "Application tracking, follow-ups, status management, and Google Sheets organization.",
+        lessons: [
+          ["External", "Google Sheets help", "external", "https://support.google.com/docs/topic/9054603"],
+          ["External", "Google Sheets templates", "external", "https://docs.google.com/spreadsheets/u/0/"]
+        ]
+      },
+      {
+        id: 3,
+        title: "Resume and job search plan",
+        summary: "Resume bullets, weekly plans, networking, Gemini support, and role targeting.",
+        lessons: [
+          ["External", "LinkedIn resume and profile help", "external", "https://www.linkedin.com/help/linkedin/answer/a507508"],
+          ["External", "Grow with Google career resources", "external", "https://grow.google/certificates/"]
+        ]
+      },
+      {
+        id: 4,
+        title: "Interview practice with AI",
+        summary: "STAR responses, case study walkthroughs, NotebookLM, Gemini Live, and interview practice.",
+        lessons: [
+          ["External", "NotebookLM", "external", "https://notebooklm.google/"],
+          ["External", "Interview Warmup", "external", "https://grow.google/certificates/interview-warmup/"]
+        ]
+      }
+    ];
+
     const flashcards = [
       ["What is a data ecosystem?", "The connected set of data sources, tools, storage, people, and processes that produce, manage, organize, analyze, and share data."],
       ["Data analysis vs data analytics?", "Data analysis is the work of preparing and examining data to draw conclusions. Data analytics is the broader field that includes analysis, methods, tools, and systems."],
@@ -3239,6 +4137,18 @@
       ,["What is a pivot table?", "A spreadsheet summary table that groups fields into rows, columns, values, and filters."]
       ,["What should you define before calculating a metric?", "Metric meaning, numerator, denominator, grain, filters, missing-value rules, and intended decision."]
       ,["Why use temporary tables?", "They store intermediate SQL results that can be checked, reused, joined, or simplified in later steps."]
+      ,["How do you choose a chart type?", "Start with the comparison task: compare categories, show change over time, show relationships, show composition, show distribution, or support exact lookup."]
+      ,["What makes a visualization misleading?", "Wrong chart type, distorted scale, missing context, excessive clutter, unclear labels, cherry-picked data, or color that implies a false meaning."]
+      ,["What is the safest use of color in charts?", "Use neutral colors for context and one clear accent color for the key insight; avoid red-green-only meaning."]
+      ,["What is a data story?", "A structured explanation that connects context, evidence, insight, recommendation, and action."]
+      ,["What is a dashboard for?", "A repeated decision or monitoring need, not just a collection of charts."]
+      ,["What should every presentation include?", "Clear takeaway, evidence, recommendation, assumptions, limitations, and expected next action."]
+      ,["What is Python useful for in analytics?", "Repeatable data cleaning, flexible transformation, automation, notebooks, pandas dataframes, and reusable analysis workflows."]
+      ,["What is a DataFrame?", "A table-like data structure, commonly in pandas, with rows, columns, labels, and operations for filtering, grouping, joining, and calculating."]
+      ,["What does a capstone case study prove?", "That you can move from business question to prepared data, analysis, visualization, recommendation, and portfolio-ready communication."]
+      ,["What should a portfolio case study contain?", "Business task, data source, tools, cleaning steps, analysis, visuals, recommendations, limitations, and links to supporting work."]
+      ,["How can AI help a job search?", "It can brainstorm roles, improve wording, organize applications, simulate interviews, and critique answers, while you verify facts and keep experience honest."]
+      ,["What is a good application tracker?", "A sheet with company, role, link, date applied, status, contact, follow-up date, resume version, notes, and next action."]
     ];
 
     const moduleRoot = document.getElementById("moduleRoot");
@@ -3263,6 +4173,8 @@
       if (type === "Assignment") return "assignment";
       if (type === "Practice") return "plugin";
       if (type === "Resources") return "plugin";
+      if (type === "External") return "plugin";
+      if (type === "Course") return "reading";
       if (type === "Plugin") return "plugin";
       return "";
     }
@@ -3352,7 +4264,11 @@
         { id: "course2", label: "Course 2", modules: course2Modules },
         { id: "course3", label: "Course 3", modules: course3Modules },
         { id: "course4", label: "Course 4", modules: course4Modules },
-        { id: "course5", label: "Course 5", modules: course5Modules }
+        { id: "course5", label: "Course 5", modules: course5Modules },
+        { id: "course6", label: "Course 6", modules: course6Modules },
+        { id: "course7", label: "Course 7", modules: course7Modules },
+        { id: "course8", label: "Course 8", modules: course8Modules },
+        { id: "course9", label: "Course 9", modules: course9Modules }
       ];
 
       resourceTabbar.innerHTML = courses.map((course, index) =>
