@@ -701,6 +701,53 @@
       color: var(--blue);
     }
 
+    .module-chapter {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .module-chapter summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 850;
+      list-style: none;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .module-chapter summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .chapter-body {
+      display: grid;
+      gap: 16px;
+      padding: 18px;
+    }
+
+    .chapter-body h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .chapter-body p,
+    .chapter-body li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .chapter-body ul,
+    .chapter-body ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
     .card h3 {
       margin: 0 0 8px;
       font-size: 17px;
@@ -3781,6 +3828,508 @@
         <div class="source-note">
           These IBM notes are not invented technical expansion. They are structured from Coursera's visible IBM course pages. Full Coursera transcripts/readings are not copied; source links stay attached to each course.
         </div>
+        <details class="module-chapter" open>
+          <summary>IBM Course 1 Module-Level Notes: Introduction to Data Analytics</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: What is Data Analytics?</h4>
+              <p>This module establishes the core idea of the certificate: data analytics is the structured use of data to answer questions, support decisions, and communicate findings. The analyst does not start with a tool. The analyst starts with a problem, identifies what information is needed, gathers or accesses data, prepares it, analyzes it, interprets the output, and communicates the result. The course frames analytics as a business-facing practice, not just a technical exercise.</p>
+              <p>The module also introduces the modern data ecosystem and the responsibilities of a data analyst. A data analyst works with stakeholders, understands the question being asked, uses data tools to investigate the issue, and turns findings into a clear explanation. The course separates the analyst role from adjacent roles. A data engineer builds and maintains the infrastructure that moves and stores data. A data scientist may build models and explore advanced statistical or machine learning questions. A business analyst connects business needs to data and process decisions. A BI analyst focuses heavily on reporting, dashboards, and recurring decision support.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Analyst responsibility</strong>Turn data into insight that supports a decision or explains a business situation.</div>
+                <div class="technical-card"><strong>Important boundary</strong>Analysis is not only tool use. It includes question framing, data quality thinking, communication, and context.</div>
+                <div class="technical-card"><strong>Revision output</strong>Be able to explain one business question, the data needed, and how a finding would be communicated.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: The Data Ecosystem</h4>
+              <p>This module expands the learner from “spreadsheet thinking” into ecosystem thinking. Data exists in many structures and file formats, comes from different sources, and moves through repositories and pipelines before analysis. The module names databases, data warehouses, data marts, data lakes, and data pipelines. These are not interchangeable. A database often stores operational information. A warehouse is optimized for analysis and reporting. A mart is a smaller subject-focused analytical store. A lake stores broad and varied data, often closer to raw form. A pipeline moves data through stages.</p>
+              <p>The module also introduces ETL and Big Data tools. ETL is the extract-transform-load pattern: extract from source systems, transform the data into a usable and consistent structure, and load it into a target system. Big Data tooling listed in the course includes Hadoop, HDFS, Hive, and Spark. For revision, the important point is not to memorize every architecture detail, but to understand why analysts need to know where data came from, how it was stored, and what happened to it before analysis.</p>
+              <div class="pipeline-diagram">
+                <div class="pipeline-step"><strong>Source</strong>Operational systems, files, web data, surveys, databases.</div>
+                <div class="pipeline-step"><strong>Extract</strong>Bring data out of the source.</div>
+                <div class="pipeline-step"><strong>Transform</strong>Clean, standardize, combine, format.</div>
+                <div class="pipeline-step"><strong>Load</strong>Place into warehouse, mart, lake, database, or analysis workspace.</div>
+                <div class="pipeline-step"><strong>Analyze</strong>Query, summarize, visualize, report.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Gathering and Wrangling Data</h4>
+              <p>This module focuses on moving from “there is data somewhere” to “there is usable data for analysis.” Gathering data means identifying the relevant source, deciding whether it is appropriate for the question, and importing or accessing it. Wrangling means preparing it for analysis: cleaning values, resolving missing or duplicate information, checking data types, and making the structure usable. The course page frames gathering and wrangling as a necessary bridge between raw data and useful analysis.</p>
+              <p>For revision, treat wrangling as a quality-control process. The analyst should ask: Is the data relevant? Is it complete enough? Are fields consistently formatted? Are dates, numbers, and categories represented correctly? Are there duplicate records? Are missing values meaningful or accidental? Can the dataset answer the original question, or does it need another source?</p>
+              <ul>
+                <li>Identify the business or analytical question before gathering data.</li>
+                <li>Confirm the data source and format.</li>
+                <li>Import or access data in the selected tool.</li>
+                <li>Check missing values, duplicates, data types, inconsistent labels, and unexpected ranges.</li>
+                <li>Document what was changed during wrangling.</li>
+              </ul>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Mining, Visualizing, and Communicating Data</h4>
+              <p>This module connects analysis to communication. Data mining and statistical analysis help reveal patterns, relationships, trends, and anomalies. Visualization turns findings into a form stakeholders can understand quickly. Communication converts a technical result into a business explanation: what was found, why it matters, what limitations exist, and what action might follow.</p>
+              <p>Dashboarding software and visualization tools are part of this module because analysts often need to create repeatable views, not only one-time charts. The course emphasizes that a visualization is not decoration. It is a communication tool. A chart should match the question, the data type, and the audience. A dashboard should organize multiple views so a stakeholder can monitor or investigate an issue.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Mining</strong>Look for patterns, trends, anomalies, and relationships.</div>
+                <div class="technical-card"><strong>Visualization</strong>Select charts that match the question and make patterns visible.</div>
+                <div class="technical-card"><strong>Communication</strong>Explain finding, evidence, limitation, and recommended next step.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Career Opportunities and Data Action</h4>
+              <p>The final module connects the course concepts to career direction and applied practice. The course references job roles and shows how the full workflow can be demonstrated: gathering data, wrangling it, mining or analyzing it, visualizing results, and communicating outcomes. This is the bridge between learning terminology and showing competence.</p>
+              <p>For revision, the key is to turn every course concept into portfolio language. Instead of saying “I learned data analytics,” say: “I identified a business question, gathered relevant data, cleaned and structured it, analyzed patterns, built visualizations, and communicated findings.” That language matches the workflow the course teaches.</p>
+              <ol>
+                <li>State the question.</li>
+                <li>Name the data source.</li>
+                <li>Describe gathering and wrangling.</li>
+                <li>Describe the analysis/mining method.</li>
+                <li>Show visualization and communication output.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 2 Module-Level Notes: Excel Basics for Data Analysis</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Spreadsheet and Excel Fundamentals</h4>
+              <p>This module builds the working foundation for Excel as an analysis tool. The visible Coursera outcomes include spreadsheet navigation, data entry, editing, formulas, moving, copying, and filling data. The important revision idea is that a worksheet is not just a place to type values. It is a structured environment where rows usually represent records, columns usually represent variables, and formulas create calculated fields that support analysis.</p>
+              <p>When revising this module, focus on accuracy and repeatability. If you type a value once, it may solve one row. If you use a formula correctly, it can support hundreds or thousands of rows. If you structure rows and columns properly, filtering, sorting, lookup functions, charts, and pivot tables become possible. Poor structure makes every later step harder.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Rows</strong>Usually individual records or observations.</div>
+                <div class="technical-card"><strong>Columns</strong>Variables or fields such as date, category, amount, status.</div>
+                <div class="technical-card"><strong>Formula thinking</strong>Create repeatable calculations instead of manual one-off edits.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Basic Excel Tasks</h4>
+              <p>This module covers the mechanical skills required before deeper analysis: navigating the workbook, entering and editing data, using formulas, moving or copying values, and filling patterns. These tasks seem basic, but they prevent common analyst mistakes. For example, copying a formula incorrectly can shift references; filling a pattern without checking may introduce wrong dates or categories; editing a value directly can break consistency if the same correction is needed elsewhere.</p>
+              <p>Revision should include the difference between raw values, formulas, and formatted display. A number can look like currency but still be numeric. A date can display one way but be stored differently. A field can look clean but contain extra spaces or inconsistent case. Excel analysis depends on understanding what the cell contains, not only what it looks like.</p>
+              <ul>
+                <li>Check whether a cell contains a raw value or formula.</li>
+                <li>Use fill carefully and verify the generated pattern.</li>
+                <li>Keep calculated columns clearly named.</li>
+                <li>Do not mix totals, notes, or headings inside the data table body.</li>
+              </ul>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Data Quality and Importing</h4>
+              <p>This module moves Excel into real data preparation. Coursera lists importing file data, cleaning imported data, and data quality techniques. Imported datasets often contain issues: blank rows, duplicate records, inconsistent spelling, numeric fields stored as text, badly formatted dates, extra spaces, or category values that should be standardized. Before analysis, the analyst must inspect and correct these issues.</p>
+              <p>For revision, think of this module as “make the dataset trustworthy enough to analyze.” A clean dataset has consistent field names, correct data types, no unexplained duplicates, handled missing values, and values that match the expected domain. The analyst should also preserve traceability: if changes are made, document what was changed and why.</p>
+              <div class="pipeline-diagram">
+                <div class="pipeline-step"><strong>Import</strong>Bring file data into Excel.</div>
+                <div class="pipeline-step"><strong>Inspect</strong>Check shape, field names, missing values, data types.</div>
+                <div class="pipeline-step"><strong>Clean</strong>Fix duplicates, formats, blanks, inconsistent labels.</div>
+                <div class="pipeline-step"><strong>Validate</strong>Confirm values make sense after cleaning.</div>
+                <div class="pipeline-step"><strong>Analyze</strong>Move to filters, formulas, pivots, charts.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Data Analysis in Excel</h4>
+              <p>This module includes filter, sort, lookup functions, pivot tables, and charts. Filtering is used to narrow records to a condition. Sorting helps rank or order values. Lookup functions connect a dataset with a reference table by key. Pivot tables summarize records into grouped metrics. Charts communicate the resulting pattern. These are connected steps, not unrelated features.</p>
+              <p>A strong Excel analyst knows the question before selecting the feature. If the question is “which region has the most revenue,” sort or pivot by region. If the question is “which product details belong to each order,” use lookup thinking. If the question is “how did sales change over time,” summarize by date and create a trend chart. If the question is “which category dominates,” use a pivot table before charting.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Filter</strong>Show only rows matching a condition.</div>
+                <div class="technical-card"><strong>Sort</strong>Rank or organize values.</div>
+                <div class="technical-card"><strong>Lookup</strong>Bring related values from a reference table using a key.</div>
+                <div class="technical-card"><strong>Pivot table</strong>Group records and summarize measures.</div>
+                <div class="technical-card"><strong>Chart</strong>Communicate the summary or pattern visually.</div>
+                <div class="technical-card"><strong>Validation</strong>Check totals before trusting results.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Final Project</h4>
+              <p>The final project module asks you to demonstrate Excel workflow, not isolated commands. A good revision project should start with imported data, continue through inspection and cleaning, then use formulas, filters, sorting, lookup logic, pivot summaries, and charts to answer questions. The final output should be readable to someone who did not watch you build it.</p>
+              <p>For revision, create a project template: business question, data source, cleaning checklist, calculated fields, pivot tables, charts, conclusion. That template matches how Excel work becomes portfolio evidence.</p>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 3 Module-Level Notes: Excel and Cognos Visualization</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Visualizing Data Using Spreadsheets</h4>
+              <p>This module introduces charting in spreadsheets as the first visualization layer. The Coursera page lists line, pie, and bar charts, plus pivot tables and PivotChart. The revision goal is to understand what each chart is doing to the data. A line chart organizes values across an ordered field, usually time. A bar chart compares values across categories. A pie chart shows part-to-whole composition but only works when there are few categories and the total is meaningful.</p>
+              <p>Pivot tables matter because they create the summarized dataset that a chart should use. A chart built directly from raw rows can be noisy or misleading. A PivotChart connects grouped summaries to visualization, so you can compare categories, periods, or segments after aggregation.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Line chart</strong>Use when order matters, especially time.</div>
+                <div class="technical-card"><strong>Bar chart</strong>Use for category comparison.</div>
+                <div class="technical-card"><strong>PivotChart</strong>Use when the chart should follow a pivot-table summary.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Creating Visualizations and Dashboards with Spreadsheets</h4>
+              <p>This module expands from basic charts to dashboard-oriented visuals. Coursera lists treemaps, scatter charts, histograms, filled map charts, and sparklines. These chart types answer different questions. A treemap shows hierarchical part-to-whole relationships. A scatter chart shows whether two numeric variables move together. A histogram shows the distribution of one numerical field. A filled map shows geographic patterns. Sparklines show compact trends inside cells.</p>
+              <p>Dashboard revision should focus on layout and purpose. A dashboard is not a collection of random charts. It is a decision surface. Put the most important metric or trend first, group related visuals together, and avoid charts that do not answer the main question. If a dashboard needs interaction, filters should be meaningful: time period, region, category, segment, or other stakeholder-relevant fields.</p>
+              <div class="pipeline-diagram">
+                <div class="pipeline-step"><strong>Question</strong>What should the viewer decide?</div>
+                <div class="pipeline-step"><strong>Metric</strong>What measure answers it?</div>
+                <div class="pipeline-step"><strong>Breakdown</strong>Which category/time/region explains it?</div>
+                <div class="pipeline-step"><strong>Chart</strong>Choose a chart matching the comparison.</div>
+                <div class="pipeline-step"><strong>Dashboard</strong>Arrange visuals for scanning and action.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Creating Visualizations and Dashboards with Cognos Analytics</h4>
+              <p>This module moves the learner from spreadsheets into IBM Cognos Analytics. The Coursera page lists signing up for Cognos, navigating Cognos, creating a simple dashboard, and advanced dashboard capabilities. The important revision idea is that Cognos is a BI/dashboarding environment. The analyst imports or connects data, creates visualizations, arranges them on a dashboard canvas, and uses dashboard features to make the output useful for business users.</p>
+              <p>Unlike a single Excel chart, a Cognos dashboard is expected to support multiple views and interactive exploration. Revise the workflow: access Cognos, load or use data, create visualization, place it in dashboard, configure fields, adjust layout, add filters or interactions, and review whether the dashboard answers the stakeholder question.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Final Project</h4>
+              <p>The final project asks for visualizations and a dashboard. A strong project should include: a clear business question, at least one comparison chart, one trend or distribution chart where appropriate, a dashboard layout, and an explanation of what the viewer should conclude. The final project should not only show chart-making ability; it should show chart selection and dashboard reasoning.</p>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 4 Module-Level Notes: Python for Data Science, AI and Development</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Python Basics</h4>
+              <p>This module introduces the Python language from the beginning: first program, types, expressions, variables, and string operations. For revision, focus on how Python stores and transforms values. A variable is a name pointing to a value. Expressions combine values and operators. Strings are sequences of characters with operations such as indexing, slicing, replacement, case conversion, and formatting.</p>
+              <pre class="code-block"><code># Python basics from the course page topics
+course_name = "IBM Data Analyst"
+hours_planned = 6
+summary = f"{course_name}: {hours_planned} hours of revision"
+
+first_word = course_name.split()[0]
+upper_name = course_name.upper()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Python Data Structures</h4>
+              <p>This module covers lists, tuples, sets, and dictionaries. A list is ordered and mutable, useful for sequences of items. A tuple is ordered but immutable, useful for fixed groupings. A set stores unique values and supports membership/deduplication thinking. A dictionary stores key-value pairs, useful for records and mappings. For analysis, dictionaries and lists often become rows or columns in tabular data.</p>
+              <pre class="code-block"><code>skills = ["Python", "pandas", "NumPy", "Python"]
+unique_skills = set(skills)
+profile = {"role": "Data Analyst", "tool": "Python", "library": "pandas"}
+
+for skill in unique_skills:
+    print(skill)</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Python Programming Fundamentals</h4>
+              <p>This module adds control flow and reuse: conditions, branching, loops, functions, exception handling, objects, and classes. These topics let you move from one-off commands to repeatable analysis logic. Conditions decide what path code takes. Loops repeat work across records. Functions package logic so it can be reused and tested. Exception handling prevents one bad value from breaking an entire workflow.</p>
+              <pre class="code-block"><code>def clean_category(value):
+    if value is None:
+        return "unknown"
+    return str(value).strip().lower()
+
+raw_categories = [" Sales ", None, "MARKETING"]
+cleaned = [clean_category(item) for item in raw_categories]</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Working with Data in Python</h4>
+              <p>This module introduces file operations, pandas, and NumPy. The course page lists opening files, writing files, loading data with pandas, and NumPy arrays. This is where Python becomes a data analysis environment. Pandas supports tabular data through DataFrames. NumPy supports numerical arrays and mathematical operations. File operations connect your code to datasets.</p>
+              <pre class="code-block"><code>import pandas as pd
+import numpy as np
+
+df = pd.read_csv("data.csv")
+numeric_values = np.array(df.select_dtypes("number"))
+df.to_csv("clean_output.csv", index=False)</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: APIs and Data Collection</h4>
+              <p>This module covers REST APIs, HTTP requests, JSON, web scraping, and file formats. The workflow is: request data from an endpoint or page, receive structured or semi-structured content, parse it, and convert it into a usable dataset. JSON often becomes dictionaries/lists in Python. HTML scraping uses parsing tools such as Beautiful Soup to extract tables or elements.</p>
+              <pre class="code-block"><code>import requests
+import pandas as pd
+
+response = requests.get("https://example.com/data.json")
+records = response.json()
+df = pd.DataFrame(records)</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 6 Module-Level Notes: Databases and SQL for Data Science with Python</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Getting Started with SQL</h4>
+              <p>The course starts with SQL as the language for relational data. The visible topics include SELECT, INSERT, UPDATE, DELETE, filtering with WHERE, counting rows, DISTINCT values, and limiting results. The analyst uses SELECT to retrieve fields, WHERE to narrow records, COUNT to summarize row volume, DISTINCT to inspect unique values, and LIMIT to preview safely.</p>
+              <pre class="code-block"><code>SELECT DISTINCT country
+FROM customers
+WHERE country IS NOT NULL
+LIMIT 20;</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Relational Databases and Tables</h4>
+              <p>This module covers relational concepts and DDL. DDL defines database structures: CREATE builds tables, ALTER changes them, DROP removes them, and loading data puts records into tables. Revision should separate table design from querying. A good table has meaningful field names, correct data types, and keys that support joins.</p>
+              <pre class="code-block"><code>CREATE TABLE orders (
+  order_id INTEGER,
+  customer_id INTEGER,
+  order_date DATE,
+  revenue DECIMAL(10, 2)
+);
+
+ALTER TABLE orders ADD COLUMN region VARCHAR(100);</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Intermediate SQL</h4>
+              <p>This module includes string patterns, ranges, sorting, grouping, built-in functions, subqueries, and multi-table queries. GROUP BY changes the grain of the result from row-level records to grouped summaries. ORDER BY makes the most important values visible. Subqueries let one query depend on another result.</p>
+              <pre class="code-block"><code>SELECT region, COUNT(*) AS orders, SUM(revenue) AS total_revenue
+FROM orders
+WHERE order_date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY region
+ORDER BY total_revenue DESC;</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Accessing Databases with Python</h4>
+              <p>The course connects SQL to Python and Jupyter. This matters because analysts often query data from a database and then continue analysis in Python. The mental model is: connect to database, run SQL, load result into a DataFrame, inspect, analyze, visualize, or export.</p>
+              <pre class="code-block"><code># Pattern for SQL + Python workflow
+import pandas as pd
+
+# connection object depends on database/driver
+query = "SELECT region, SUM(revenue) AS total_revenue FROM orders GROUP BY region"
+df = pd.read_sql(query, con=connection)</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Advanced SQL</h4>
+              <p>Advanced topics listed include joins, views, ACID transactions, stored procedures, and inner/outer joins. Joins combine related tables through keys. Views save reusable query logic. ACID describes transaction reliability: atomicity, consistency, isolation, durability. Stored procedures package database logic for reuse.</p>
+              <pre class="code-block"><code>SELECT o.order_id, c.customer_name, o.revenue
+FROM orders AS o
+LEFT JOIN customers AS c
+  ON o.customer_id = c.customer_id;</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 5 Module-Level Notes: Python Project for Data Science</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Project Orientation</h4>
+              <p>This project course is designed to prove that the earlier Python foundations can be used in a realistic data task. Coursera describes the learner as playing a Data Scientist/Data Analyst role and applying Python fundamentals, data structures, and working-with-data skills. The project uses Jupyter Notebook as the working environment and tools such as pandas, Beautiful Soup, and Plotly.</p>
+              <p>For revision, this course should be treated as a workflow demonstration. You should be able to explain what data was collected, how it was loaded, how it was cleaned or structured, how pandas was used, where web extraction fits, what Plotly visualized, and how the dashboard communicates the result.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Project Workflow</h4>
+              <div class="pipeline-diagram">
+                <div class="pipeline-step"><strong>Collect</strong>Use project source data and extraction tools.</div>
+                <div class="pipeline-step"><strong>Load</strong>Bring data into Jupyter and pandas.</div>
+                <div class="pipeline-step"><strong>Inspect</strong>Check columns, types, missing values, row counts.</div>
+                <div class="pipeline-step"><strong>Visualize</strong>Use Plotly for project graphs.</div>
+                <div class="pipeline-step"><strong>Dashboard</strong>Organize output as an analyst deliverable.</div>
+              </div>
+              <pre class="code-block"><code>import pandas as pd
+from bs4 import BeautifulSoup
+import plotly.express as px
+
+df = pd.read_csv("project_data.csv")
+df = df.drop_duplicates()
+
+fig = px.line(df, x="date", y="value", title="Project trend")
+fig.show()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Revision Deliverable</h4>
+              <ul>
+                <li>Write the project objective in one sentence.</li>
+                <li>List the data source and how the data was obtained.</li>
+                <li>Explain how pandas was used for manipulation.</li>
+                <li>Explain what Plotly chart was created and why.</li>
+                <li>Summarize what the dashboard communicates.</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 7 Module-Level Notes: Data Analysis with Python</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Importing Datasets</h4>
+              <p>This module introduces the working environment for Python analysis. Coursera lists datasets, packages, importing/exporting data, and getting started analyzing with Python. The analyst must understand where the data is coming from, what file type is being loaded, how many rows and columns exist, and which columns are numeric, categorical, date-like, or text. Import is not complete until the dataset is inspected.</p>
+              <pre class="code-block"><code>import pandas as pd
+
+df = pd.read_csv("dataset.csv")
+print(df.head())
+print(df.shape)
+print(df.dtypes)
+print(df.info())</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Data Wrangling</h4>
+              <p>This module covers pre-processing, missing values, formatting, normalization, binning, and categorical conversion. Wrangling makes the dataset usable. Missing values must be identified and handled according to meaning. Formatting ensures numeric fields are numeric and date fields are dates. Normalization changes scale for comparison. Binning converts continuous values into grouped categories. Categorical conversion prepares non-numeric labels for analysis or modeling.</p>
+              <pre class="code-block"><code>df = df.drop_duplicates()
+df["price"] = pd.to_numeric(df["price"], errors="coerce")
+df["price"] = df["price"].fillna(df["price"].median())
+df["price_band"] = pd.cut(df["price"], bins=3, labels=["low", "medium", "high"])</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Exploratory Data Analysis</h4>
+              <p>EDA is where the analyst studies the data before building models. Coursera lists descriptive statistics, grouping, Pearson correlation, correlation heatmaps, and chi-square. Descriptive statistics reveal central tendency and spread. Grouping summarizes values by category. Pearson correlation measures linear relationship between continuous numerical variables. Chi-square is used for categorical relationships.</p>
+              <pre class="code-block"><code>summary = df.describe()
+brand_price = df.groupby("brand")["price"].mean().sort_values(ascending=False)
+correlation = df[["price", "ram", "screen_size"]].corr()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Model Development</h4>
+              <p>This module introduces regression and pipelines. The course lists simple linear regression, multiple linear regression, polynomial regression, pipelines, and measures for in-sample evaluation. The revision goal is not just to run a model, but to understand what is being predicted, which features are being used, and how performance is judged.</p>
+              <pre class="code-block"><code>from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+X = df[["ram", "screen_size"]]
+y = df["price"]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Model Evaluation and Refinement</h4>
+              <p>This module includes overfitting, underfitting, model selection, ridge regression, and grid search. Overfitting means the model learns training data too specifically and fails to generalize. Underfitting means the model is too simple to capture the pattern. Ridge regression adds regularization. Grid search tries combinations of hyperparameters to find a better model configuration.</p>
+              <pre class="code-block"><code>from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV
+
+params = {"alpha": [0.1, 1.0, 10.0]}
+search = GridSearchCV(Ridge(), params, cv=3)
+search.fit(X_train, y_train)
+best_model = search.best_estimator_</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 8 Module-Level Notes: Data Visualization with Python</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Introduction to Data Visualization Tools</h4>
+              <p>This module introduces visualization purpose and Matplotlib foundations. Coursera lists visualization best practices, Matplotlib history, architecture, basic plotting, and the Canadian immigration dataset. The revision point is that visualization is a tool for understanding and communicating data-driven decisions. Before plotting, identify the data type, comparison type, and audience.</p>
+              <pre class="code-block"><code>import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("canadian_immigration.csv")
+df.groupby("year")["immigrants"].sum().plot(kind="line")
+plt.title("Immigration trend by year")
+plt.xlabel("Year")
+plt.ylabel("Immigrants")
+plt.show()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Basic and Specialized Visualization Tools</h4>
+              <p>This module lists line plots, area plots, histograms, bar charts, pie charts, box plots, and scatter plots. Each chart answers a different question. Line and area plots show change over an ordered field. Histograms and box plots show distribution. Bar charts compare categories. Pie charts show simple part-to-whole. Scatter plots show relationship between two numeric variables.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Distribution</strong>Histogram, box plot.</div>
+                <div class="technical-card"><strong>Trend</strong>Line plot, area plot.</div>
+                <div class="technical-card"><strong>Relationship</strong>Scatter plot.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Advanced Visualizations and Geospatial Data</h4>
+              <p>Coursera lists waffle charts, word clouds, regression plots, geospatial data, Folium maps, maps with markers, and choropleth maps. These extend beyond standard business charts. Waffle charts can represent part-to-whole in a grid. Word clouds visualize text frequency. Regression plots connect visualization with trend modeling. Folium is used for map-based visuals, including markers and choropleth regions.</p>
+              <pre class="code-block"><code>import seaborn as sns
+
+sns.regplot(data=df, x="year", y="immigrants")
+plt.title("Regression-style visualization")
+plt.show()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Creating Dashboards with Plotly and Dash</h4>
+              <p>This module moves from notebooks to interactive visual applications. Coursera lists Plotly basics, scatter/line/bar/bubble/pie/sunburst charts, Dash basics, dashboard interactivity, and a flight delay dashboard. Plotly creates interactive charts. Dash creates app-style dashboards with layout and interactive components.</p>
+              <pre class="code-block"><code>import plotly.express as px
+
+fig = px.scatter(
+    df,
+    x="year",
+    y="immigrants",
+    color="country",
+    title="Interactive immigration scatter"
+)
+fig.show()</code></pre>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Final Project</h4>
+              <p>The final project applies Python visualization skills to a reporting task. A strong project should include correct chart selection, clear titles, readable axes, appropriate color, and a short explanation of what each chart shows. If using interactive dashboards, the controls should answer real follow-up questions rather than exist only as decoration.</p>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 9 Module-Level Notes: IBM Data Analyst Capstone Project</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Data Collection</h4>
+              <p>The capstone starts with data collection using APIs and web scraping. Coursera references the Stack Overflow Developer Survey context, JSON endpoint work, HTML tables, and CSV output. The revision goal is to understand that data collection creates the raw material for the project. Collection must be reproducible and documented: where did the data come from, how was it accessed, what format did it arrive in, and how was it saved?</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Data Wrangling</h4>
+              <p>Coursera lists duplicates, missing values, imputation, and normalization. This is a data-quality module. Duplicates inflate counts. Missing values can distort summaries if ignored. Imputation fills missing data using a chosen rule. Normalization makes values comparable. Every cleaning decision should be explainable in the final report.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Exploratory Data Analysis</h4>
+              <p>EDA includes distributions, histograms, outliers, and correlation. In the capstone, EDA helps identify which fields are useful and which patterns should become visual or dashboard findings. The analyst should move from broad inspection to specific questions: What technologies are common? Which trends appear? Which demographic or role patterns matter?</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 4: Data Visualization</h4>
+              <p>Coursera lists histograms, box plots, scatter plots, bubble plots, pie charts, stacked charts, line charts, and bar charts. This module turns EDA into communication. Each chart should be chosen by purpose: histogram for distribution, box plot for spread/outliers, scatter/bubble for relationship, stacked chart for composition, line for trend, bar for comparison.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 5: Dashboard</h4>
+              <p>The dashboard module uses Cognos or Looker Studio. Coursera lists dashboard sections for current technology usage, future technology trends, and demographics. This means the dashboard should not be a random page of visuals. It should have sections that answer stakeholder questions about the developer and technology landscape.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 6: Final Presentation</h4>
+              <p>The final module requires presenting findings, including executive summary, insights, and conclusion. A strong final presentation should explain the question, data source, cleaning steps, analysis approach, dashboard structure, key findings, and limitations. It should end with conclusions that are supported by the data shown.</p>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 10 Module-Level Notes: Generative AI for Data Analytics</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Generative AI in Data Analytics</h4>
+              <p>This module introduces generative AI in the analytics workflow. Coursera lists data generation, data augmentation, data preparation, database querying, Q&A model insights, and broader use cases. The revision point is that GenAI is treated as an assistant in the analytics process, not as a replacement for validation. It can help draft code, suggest cleaning steps, generate query ideas, summarize patterns, and help frame insights, but the analyst must verify the output against data and business context.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Data generation</strong>Creating or augmenting data for practice or workflow support.</div>
+                <div class="technical-card"><strong>Preparation</strong>Suggesting cleaning, formatting, or transformation approaches.</div>
+                <div class="technical-card"><strong>Database querying</strong>Helping draft or explain SQL queries.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Using Generative AI for Insights, Visualization, Dashboards, and Storytelling</h4>
+              <p>This module connects GenAI to communication. Coursera lists Q&A model insights, data insights, visualization, visually compelling representations, dashboarding, and storytelling. The revision idea is to use GenAI to accelerate drafting and exploration while still checking accuracy. If GenAI suggests a chart, the analyst still decides whether the chart matches the data and question. If GenAI writes a story, the analyst still validates the claim.</p>
+              <ul>
+                <li>Use GenAI to brainstorm analysis angles, not to invent results.</li>
+                <li>Use GenAI to draft SQL/Python, then run and inspect output.</li>
+                <li>Use GenAI to improve chart titles and story flow, then verify the claim.</li>
+                <li>Use GenAI to summarize a dashboard, but keep source data as the authority.</li>
+              </ul>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Final Project, Ethics, and Exam</h4>
+              <p>The course includes responsible AI, industry considerations, a healthcare case study, and a final guided project using a real-world dataset. Coursera describes generating Python code for data preparation, analysis, visualization, and dashboarding. The revision standard is: prompt carefully, inspect generated code, run it, validate results, revise prompts, and document limitations.</p>
+              <pre class="code-block"><code># Safe GenAI-assisted analytics pattern
+# 1. Ask for code idea
+# 2. Run locally
+# 3. Inspect output
+# 4. Compare with source data
+# 5. Document what was accepted or changed</code></pre>
+            </div>
+          </div>
+        </details>
+        <details class="module-chapter" open>
+          <summary>IBM Course 11 Module-Level Notes: Career Guide and Interview Preparation</summary>
+          <div class="chapter-body">
+            <div class="reader-block">
+              <h4>Module 1: Data Analyst Role and Career Opportunities</h4>
+              <p>This module frames the career path. Coursera lists the data analyst role, career path options, and prospective opportunities. Revision here should connect course skills to role expectations: spreadsheets, SQL, Python, visualization, dashboards, data cleaning, communication, and portfolio evidence. A job title is less important than the workflow you can demonstrate.</p>
+            </div>
+            <div class="reader-block">
+              <h4>Module 2: Applying and Preparing for Interviews</h4>
+              <p>This module includes job search foundation, job listings, resume writing, portfolio creation, cover letters, references, and elevator pitch. A strong resume bullet should show tool, action, and outcome. A portfolio project should show business task, data source, cleaning, analysis, visualization, conclusion, and limitations. An elevator pitch should say who you are, what skills you bring, and what role you are targeting.</p>
+              <div class="technical-grid">
+                <div class="technical-card"><strong>Resume</strong>Tool + analytical action + evidence/result.</div>
+                <div class="technical-card"><strong>Portfolio</strong>Question, data, method, visuals, recommendation.</div>
+                <div class="technical-card"><strong>Pitch</strong>Short, specific, role-aligned, evidence-backed.</div>
+              </div>
+            </div>
+            <div class="reader-block">
+              <h4>Module 3: Interviewing</h4>
+              <p>This module covers interview cycle, interview types, preparation, effective interviews, and professional presentation. For revision, prepare both behavioral and technical stories. Behavioral answers can use STAR: situation, task, action, result. Technical answers should explain the business question, data source, cleaning, method, validation, findings, limitations, and next step.</p>
+              <ol>
+                <li>Prepare one story about cleaning messy data.</li>
+                <li>Prepare one story about SQL or Python analysis.</li>
+                <li>Prepare one story about visualization/dashboard communication.</li>
+                <li>Prepare one story about a project limitation and how you handled it.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
         <div class="note-panel">
           <h3>IBM Deep Revision Pack</h3>
           <p>This pack is written as revision material from the actual Coursera course/module outlines: what the module teaches, what labs ask you to practice, which tools are involved, and what you should be able to reproduce without reopening the course.</p>
