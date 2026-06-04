@@ -629,6 +629,78 @@
       font-size: 12px;
     }
 
+    .source-note {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      background: var(--panel-2);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .technical-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .technical-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .technical-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .code-block {
+      overflow: auto;
+      margin-top: 10px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f172a;
+      color: #e5edf8;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .code-block code {
+      font: inherit;
+      color: inherit;
+    }
+
+    .pipeline-diagram {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pipeline-step {
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .pipeline-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+    }
+
     .card h3 {
       margin: 0 0 8px;
       font-size: 17px;
@@ -1229,7 +1301,8 @@
     [data-theme="dark"] .empty,
     [data-theme="dark"] .roadmap-list li,
     [data-theme="dark"] .quick-list a,
-    [data-theme="dark"] .quick-list span {
+    [data-theme="dark"] .quick-list span,
+    [data-theme="dark"] .source-note {
       background: var(--panel-2);
       border-color: var(--line);
     }
@@ -1250,7 +1323,9 @@
     [data-theme="dark"] .formula,
     [data-theme="dark"] .resource-tabbar button,
     [data-theme="dark"] .practice li,
-    [data-theme="dark"] .course-tile {
+    [data-theme="dark"] .course-tile,
+    [data-theme="dark"] .technical-card,
+    [data-theme="dark"] .pipeline-step {
       background: #0f172a;
       border-color: var(--line);
       color: var(--ink);
@@ -1273,7 +1348,10 @@
     [data-theme="dark"] .flow-cell,
     [data-theme="dark"] .stakeholder-cell,
     [data-theme="dark"] .answer,
-    [data-theme="dark"] .practice li {
+    [data-theme="dark"] .practice li,
+    [data-theme="dark"] .technical-card,
+    [data-theme="dark"] .pipeline-step,
+    [data-theme="dark"] .source-note {
       color: var(--muted);
     }
 
@@ -1305,6 +1383,8 @@
       .grid,
       .chart-choice-grid,
       .external-links,
+      .technical-grid,
+      .pipeline-diagram,
       .flash-grid {
         grid-template-columns: 1fr;
       }
@@ -1315,6 +1395,8 @@
       .smart-grid,
       .chart-choice-grid,
       .external-links,
+      .technical-grid,
+      .pipeline-diagram,
       .flow-diagram,
       .stakeholder-map,
       .formula-strip { grid-template-columns: repeat(2, 1fr); }
@@ -1336,6 +1418,8 @@
       .smart-grid,
       .chart-choice-grid,
       .external-links,
+      .technical-grid,
+      .pipeline-diagram,
       .flow-diagram,
       .stakeholder-map,
       .formula-strip { grid-template-columns: 1fr; }
@@ -1392,6 +1476,7 @@
       <nav aria-label="Page sections">
         <a href="#overview">Course overview</a>
         <a href="#ibm-roadmap">IBM roadmap</a>
+        <a href="#ibm-reader">IBM technical notes</a>
         <a href="#mental-model">Mental model</a>
         <a href="#course-reader">Course reader</a>
         <a href="#course-2-reader">Course 2 reader</a>
@@ -3686,6 +3771,327 @@
         </div>
       </section>
 
+      <section id="ibm-reader">
+        <div class="section-title">
+          <div>
+            <h2>IBM Data Analyst Technical Notes</h2>
+            <p>Source-based notes mapped to the visible Coursera course pages, module descriptions, lesson titles, labs, tools, skills, and outcomes for the IBM Data Analyst Professional Certificate.</p>
+          </div>
+        </div>
+        <div class="source-note">
+          These IBM notes are not invented technical expansion. They are structured from Coursera's visible IBM course pages. Full Coursera transcripts/readings are not copied; source links stay attached to each course.
+        </div>
+        <div class="reader">
+          <article class="reader-module">
+            <header>
+              <h3>IBM 1: Introduction to Data Analytics</h3>
+              <p><a href="https://www.coursera.org/learn/introduction-to-data-analytics?specialization=ibm-data-analyst" target="_blank" rel="noreferrer">Coursera source</a>: 5 modules covering analytics, the data ecosystem, gathering/wrangling, mining/visualizing/communicating, and careers/action.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Module Flow</h4>
+                  <div class="pipeline-diagram">
+                    <div class="pipeline-step"><strong>1. Analytics</strong>Data analytics process, modern ecosystem, analyst responsibilities, data roles.</div>
+                    <div class="pipeline-step"><strong>2. Ecosystem</strong>Structures, file formats, sources, languages, repositories, ETL, Big Data tools.</div>
+                    <div class="pipeline-step"><strong>3. Wrangling</strong>Identify, gather, import, clean, and prepare data.</div>
+                    <div class="pipeline-step"><strong>4. Communicate</strong>Statistical analysis, mining, visualization, dashboards, sharing findings.</div>
+                    <div class="pipeline-step"><strong>5. Career</strong>Career paths and applied tasks across the analysis workflow.</div>
+                  </div>
+                </div>
+                <div class="reader-block">
+                  <h4>Course Terms Listed</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Roles</strong>Data Engineer, Data Analyst, Data Scientist, Business Analyst, BI Analyst.</div>
+                    <div class="technical-card"><strong>Repositories</strong>Databases, data warehouses, marts, lakes, pipelines.</div>
+                    <div class="technical-card"><strong>Big Data</strong>Hadoop, HDFS, Hive, Spark.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Explain analytics process steps.</li><li>Differentiate data roles.</li><li>Define ETL and repository types.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 2: Excel Basics for Data Analysis</h3>
+              <p><a href="https://www.coursera.org/learn/excel-basics-data-analysis-ibm?specialization=ibm-data-analyst" target="_blank" rel="noreferrer">Coursera source</a>: Excel fundamentals, basic spreadsheet tasks, data quality/import, formulas, filter/sort/lookups, pivot tables, and charts.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Course Outcomes</h4>
+                  <ul>
+                    <li>Display working knowledge of Excel for data analysis.</li>
+                    <li>Perform navigation, data entry, editing, formulas, moving/copying/filling.</li>
+                    <li>Use data quality techniques to import and clean data in Excel.</li>
+                    <li>Analyze data with filters, sorting, lookup functions, pivot tables, and charts.</li>
+                  </ul>
+                </div>
+                <div class="reader-block">
+                  <h4>Excel Skill Map</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Basic operations</strong>Worksheet/workbook navigation, entry, edit, fill.</div>
+                    <div class="technical-card"><strong>Data quality</strong>Import file data and clean imported data.</div>
+                    <div class="technical-card"><strong>Analysis</strong>Filter, sort, lookup, pivot tables, pivot charts.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Clean before summarizing.</li><li>Use pivot tables for aggregation.</li><li>Use lookup functions to combine reference data.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 3: Data Visualization and Dashboards with Excel and Cognos</h3>
+              <p><a href="https://www.coursera.org/learn/data-visualization-dashboards-excel-cognos" target="_blank" rel="noreferrer">Coursera source</a>: 4 modules on Excel charts, Excel dashboards, Cognos Analytics dashboards, optional Looker Studio, and a final visualization/dashboard project.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Visualization Flow</h4>
+                  <div class="pipeline-diagram">
+                    <div class="pipeline-step"><strong>Basic charts</strong>Line, pie, bar charts.</div>
+                    <div class="pipeline-step"><strong>Pivot visuals</strong>Pivot tables and PivotChart.</div>
+                    <div class="pipeline-step"><strong>Advanced charts</strong>Treemap, scatter, histogram, filled map, sparkline.</div>
+                    <div class="pipeline-step"><strong>Cognos</strong>Sign up, navigate, create dashboard, advanced capabilities.</div>
+                    <div class="pipeline-step"><strong>Project</strong>Excel visuals plus Cognos/Looker dashboard.</div>
+                  </div>
+                </div>
+                <div class="reader-block">
+                  <h4>Chart Families Listed</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Comparison/trend</strong>Bar, line, PivotChart.</div>
+                    <div class="technical-card"><strong>Distribution/relationship</strong>Histogram, scatter plot.</div>
+                    <div class="technical-card"><strong>Composition/location</strong>Pie, treemap, filled map.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Charts support a data-driven story.</li><li>Dashboards combine visuals for presentation.</li><li>Cognos is the main BI tool in this course.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 4: Python for Data Science, AI and Development</h3>
+              <p><a href="https://www.coursera.org/learn/python-for-applied-data-science-ai" target="_blank" rel="noreferrer">Coursera source</a>: Python basics, data structures, programming fundamentals, files, pandas, NumPy, APIs, HTTP requests, JSON, web scraping, and file formats.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Python Topic Map</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Basics</strong>First program, types, expressions, variables, string operations.</div>
+                    <div class="technical-card"><strong>Structures</strong>Lists, tuples, sets, dictionaries.</div>
+                    <div class="technical-card"><strong>Logic</strong>Conditions, branching, loops, functions, exceptions, objects/classes.</div>
+                    <div class="technical-card"><strong>Data</strong>Reading/writing files, pandas loading/saving, NumPy 1D/2D arrays.</div>
+                    <div class="technical-card"><strong>Collection</strong>REST APIs, HTTP requests, BeautifulSoup web scraping.</div>
+                    <div class="technical-card"><strong>Tools</strong>Python, Jupyter, pandas, NumPy, JSON, REST APIs.</div>
+                  </div>
+                  <pre class="code-block"><code># Source-listed topics: requests, JSON, pandas, web data
+import requests
+import pandas as pd
+
+response = requests.get("https://example.com/data.json")
+records = response.json()
+df = pd.DataFrame(records)</code></pre>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Syntax before data structures.</li><li>Files, pandas, NumPy are the data-work module.</li><li>APIs and scraping are the collection module.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 5: Python Project for Data Science</h3>
+              <p><a href="https://www.coursera.org/learn/python-project-for-data-science" target="_blank" rel="noreferrer">Coursera source</a>: project course where learners play a Data Scientist/Data Analyst role, apply Python fundamentals, and build a dashboard using pandas, Beautiful Soup, Plotly, and Jupyter.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Project Pipeline</h4>
+                  <div class="pipeline-diagram">
+                    <div class="pipeline-step"><strong>Collect</strong>Capture data with Python tools.</div>
+                    <div class="pipeline-step"><strong>Wrangle</strong>Prepare collected data.</div>
+                    <div class="pipeline-step"><strong>Manipulate</strong>Use pandas-oriented operations.</div>
+                    <div class="pipeline-step"><strong>Visualize</strong>Use Plotly for graphing.</div>
+                    <div class="pipeline-step"><strong>Dashboard</strong>Build dashboard deliverable.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Intermediate project course.</li><li>Prerequisite: Python and data knowledge.</li><li>Tools: Python, Jupyter, pandas, dashboard.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 6: Databases and SQL for Data Science with Python</h3>
+              <p><a href="https://www.coursera.org/learn/sql-data-science?specialization=ibm-data-analyst" target="_blank" rel="noreferrer">Coursera source</a>: relational databases, DDL, DML, filtering, grouping, functions, subqueries, joins, views, transactions, stored procedures, and SQL with Python/Jupyter.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>SQL Topics Listed</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>DML</strong>SELECT, INSERT, UPDATE, DELETE.</div>
+                    <div class="technical-card"><strong>Filters</strong>WHERE, COUNT, DISTINCT, LIMIT, string patterns, ranges.</div>
+                    <div class="technical-card"><strong>DDL</strong>CREATE, ALTER, DROP, load tables.</div>
+                    <div class="technical-card"><strong>Summaries</strong>ORDER, GROUP, built-in database functions.</div>
+                    <div class="technical-card"><strong>Advanced</strong>Subqueries, joins, views, ACID transactions, stored procedures.</div>
+                    <div class="technical-card"><strong>Python access</strong>Jupyter notebooks with SQL and Python.</div>
+                  </div>
+                  <pre class="code-block"><code>-- Source-listed SQL areas: SELECT, WHERE, COUNT, DISTINCT, LIMIT, GROUP, ORDER
+SELECT category, COUNT(*) AS row_count
+FROM table_name
+WHERE category IS NOT NULL
+GROUP BY category
+ORDER BY row_count DESC
+LIMIT 10;
+
+-- Source-listed DDL areas: CREATE, ALTER, DROP
+CREATE TABLE example_table (
+  id INTEGER,
+  category VARCHAR(100)
+);</code></pre>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Separate DDL and DML.</li><li>Practice joins and subqueries.</li><li>Remember advanced items: views, transactions, stored procedures.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 7: Data Analysis with Python</h3>
+              <p><a href="https://www.coursera.org/learn/data-analysis-with-python?specialization=ibm-data-analyst" target="_blank" rel="noreferrer">Coursera source</a>: import/clean/wrangle data, EDA, visualization, regression models, pipelines, model evaluation and refinement.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Analysis Workflow</h4>
+                  <div class="pipeline-diagram">
+                    <div class="pipeline-step"><strong>Import</strong>Use Python libraries to import/export data.</div>
+                    <div class="pipeline-step"><strong>Clean</strong>Missing values, formatting, normalization, binning.</div>
+                    <div class="pipeline-step"><strong>EDA</strong>Distributions, correlations, patterns, insights.</div>
+                    <div class="pipeline-step"><strong>Model</strong>Linear, multiple, polynomial regression.</div>
+                    <div class="pipeline-step"><strong>Evaluate</strong>Scikit-learn evaluation and refinement.</div>
+                  </div>
+                  <pre class="code-block"><code># Source-listed workflow: import, clean, EDA
+import pandas as pd
+
+df = pd.read_csv("dataset.csv")
+df = df.drop_duplicates()
+summary = df.describe()</code></pre>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Libraries listed: pandas, NumPy, Matplotlib, Seaborn, SciPy, Scikit-learn.</li><li>Regression and evaluation are part of the course.</li><li>Final assignment applies the full workflow.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 8: Data Visualization with Python</h3>
+              <p><a href="https://www.coursera.org/learn/python-for-data-visualization" target="_blank" rel="noreferrer">Coursera source</a>: Matplotlib, Seaborn, Folium, Plotly, Dash, static charts, advanced visualizations, maps, and interactive dashboards.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Visualization Libraries and Plots</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Matplotlib</strong>Architecture, basic plotting, line plots, area, histogram, bar, pie, box, scatter.</div>
+                    <div class="technical-card"><strong>Advanced</strong>Waffle charts, word clouds, regression plots, choropleth maps, marker maps.</div>
+                    <div class="technical-card"><strong>Interactive</strong>Plotly and Dash dashboards with scatter, line, bar, bubble, pie, sunburst.</div>
+                    <div class="technical-card"><strong>Geospatial</strong>Folium, geospatial mapping, choropleth maps.</div>
+                    <div class="technical-card"><strong>Course dataset</strong>Canadian immigration dataset appears in Module 1.</div>
+                    <div class="technical-card"><strong>Environment</strong>Jupyter notebooks and cloud IDE labs.</div>
+                  </div>
+                  <pre class="code-block"><code># Libraries listed by the Coursera visualization course
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+
+# Chart families listed: line, area, histogram, bar, pie, box, scatter, bubble, choropleth</code></pre>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Chart choice is central to communication.</li><li>Folium handles map-style work.</li><li>Dash/Plotly handle interactive dashboards.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 9: IBM Data Analyst Capstone Project</h3>
+              <p><a href="https://www.coursera.org/learn/ibm-data-analyst-capstone-project" target="_blank" rel="noreferrer">Coursera source</a>: 6 modules using Stack Overflow Developer Survey data: collection, wrangling, EDA, visualization, dashboard, and final presentation.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Capstone Workflow</h4>
+                  <div class="pipeline-diagram">
+                    <div class="pipeline-step"><strong>Collect</strong>APIs, JSON endpoint, web scraping, HTML tables, CSV.</div>
+                    <div class="pipeline-step"><strong>Wrangle</strong>Duplicates, missing values, imputation, normalization.</div>
+                    <div class="pipeline-step"><strong>EDA</strong>Distributions, histograms, outliers, correlation, DataFrames.</div>
+                    <div class="pipeline-step"><strong>Visualize</strong>Histogram, box, scatter, bubble, pie, stacked, line, bar.</div>
+                    <div class="pipeline-step"><strong>Present</strong>Cognos/Looker dashboard, report, PowerPoint/PDF final presentation.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Tools listed: Jupyter, SQL, RDBMS, Cognos, pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn.</li><li>Dashboard sections include current technology usage, future trends, and demographics.</li><li>Final deliverable includes executive summary, insights, conclusion.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 10: Generative AI: Enhance your Data Analytics Career</h3>
+              <p><a href="https://www.coursera.org/learn/generative-ai-enhance-your-data-analytics-career" target="_blank" rel="noreferrer">Coursera source</a>: 3 modules covering generative AI for analytics, use in insights/visualization/dashboards/storytelling, ethics/challenges, and a final project/exam.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>GenAI Analytics Uses Listed</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Generation</strong>Data generation and augmentation.</div>
+                    <div class="technical-card"><strong>Preparation</strong>Generative AI for data preparation.</div>
+                    <div class="technical-card"><strong>Querying</strong>Generative AI for querying databases.</div>
+                    <div class="technical-card"><strong>Insights</strong>Q&A model insights and data insights.</div>
+                    <div class="technical-card"><strong>Communication</strong>Visualization, dashboards, storytelling.</div>
+                    <div class="technical-card"><strong>Responsible use</strong>Ethics, industry considerations, healthcare case study.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Tools named include ChatGPT, ChatCSV, Mostly.AI, SQLthroughAI, Microsoft Copilot, OpenAI, prompt engineering.</li><li>Final project uses GenAI to generate Python code for preparation, analysis, visualization, dashboarding.</li></ul></aside>
+            </div>
+          </article>
+
+          <article class="reader-module">
+            <header>
+              <h3>IBM 11: Data Analyst Career Guide and Interview Preparation</h3>
+              <p><a href="https://www.coursera.org/learn/career-guide-and-interview-prep-for-data-analyst" target="_blank" rel="noreferrer">Coursera source</a>: 3 modules covering role/opportunities, applying/interview preparation, and interviewing.</p>
+            </header>
+            <div class="reader-content">
+              <div class="reader-main">
+                <div class="reader-block">
+                  <h4>Course Outcomes</h4>
+                  <ul>
+                    <li>Describe the data analyst role, career path options, and prospective opportunities.</li>
+                    <li>Build a job-search foundation: job listings, resume, portfolio.</li>
+                    <li>Summarize interview cycle, types of interviews, and preparation.</li>
+                    <li>Explain effective interviews and professional personal presentation.</li>
+                  </ul>
+                </div>
+                <div class="reader-block">
+                  <h4>Visible Labs/Readings</h4>
+                  <div class="technical-grid">
+                    <div class="technical-card"><strong>Resume</strong>Draft your resume, attention-getting resumes, standing out.</div>
+                    <div class="technical-card"><strong>Applications</strong>Basic cover letter, references, job leads.</div>
+                    <div class="technical-card"><strong>Pitch</strong>Elevator pitch and professional presentation.</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="reader-side"><h4>Revise</h4><ul><li>Prepare portfolio, resume, cover letter, references.</li><li>Understand interview types and cycle.</li><li>Practice professional presentation.</li></ul></aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="next-review" class="note-panel">
         <h3>Suggested Review Plan</h3>
         <div class="two-col">
@@ -3715,6 +4121,7 @@
             <h3>Study Tools</h3>
             <ul class="quick-list">
               <li><a href="#course-6-reader">Visualization guide <span>Course 6</span></a></li>
+              <li><a href="#ibm-reader">IBM technical notes <span>11 courses</span></a></li>
               <li><a href="#resources">Course resources <span>9 tabs</span></a></li>
               <li><a href="#flashcards">Flashcards <span>66</span></a></li>
               <li><a href="#practice">Practice prompts <span>64</span></a></li>
@@ -3724,7 +4131,7 @@
             <h3>Certificate Status</h3>
             <ul class="quick-list">
               <li><span>Google reader <strong>Complete</strong></span></li>
-              <li><span>IBM reader <strong>Ready to add</strong></span></li>
+              <li><span>IBM reader <strong>Source notes added</strong></span></li>
               <li><span>Dark mode <strong id="themeStatus">Light</strong></span></li>
             </ul>
           </div>
