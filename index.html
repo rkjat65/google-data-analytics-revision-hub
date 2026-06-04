@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Google Data Analytics Revision Hub</title>
+  <title>Data Analytics Certification Revision Hub</title>
   <style>
     :root {
       --bg: #f7f8fb;
+      --bg-soft: #eef2f7;
       --ink: #172033;
       --muted: #667085;
       --line: #d9dee8;
@@ -21,12 +22,30 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    [data-theme="dark"] {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --ink: #e5edf8;
+      --muted: #a7b3c6;
+      --line: #273449;
+      --panel: #111827;
+      --panel-2: #172033;
+      --blue: #60a5fa;
+      --green: #4ade80;
+      --amber: #fbbf24;
+      --red: #f87171;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+      color-scheme: dark;
+    }
+
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(31, 103, 210, 0.12), transparent 34rem),
+        linear-gradient(180deg, var(--bg), var(--bg-soft));
       line-height: 1.5;
     }
 
@@ -39,7 +58,7 @@
       min-height: 100vh;
     }
 
-    aside {
+    .app > aside {
       position: sticky;
       top: 0;
       height: 100vh;
@@ -81,6 +100,72 @@
       font-size: 12px;
     }
 
+    .sidebar-label {
+      margin: 22px 0 9px;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .certificate-switcher {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .cert-pill {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #e5e7eb;
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 13px;
+    }
+
+    .cert-pill:hover,
+    .cert-pill.active {
+      text-decoration: none;
+      background: #ffffff;
+      color: #111827;
+      border-color: #ffffff;
+    }
+
+    .cert-icon {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      color: inherit;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .cert-pill.active .cert-icon,
+    .cert-pill:hover .cert-icon {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .cert-pill strong,
+    .cert-pill small {
+      display: block;
+    }
+
+    .cert-pill small {
+      margin-top: 2px;
+      color: inherit;
+      opacity: 0.7;
+      font-size: 11px;
+    }
+
     .course-stack {
       display: grid;
       gap: 8px;
@@ -104,6 +189,11 @@
       background: #ffffff;
       color: #111827;
       border-color: #ffffff;
+    }
+
+    .course-pill.planned {
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.02);
     }
 
     .course-index {
@@ -153,6 +243,47 @@
       padding: 32px;
     }
 
+    .top-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--panel) 86%, transparent);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .top-strip strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .top-strip span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      min-height: 38px;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--panel);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
@@ -180,8 +311,8 @@
     .hero-copy h2 {
       margin: 0;
       max-width: 780px;
-      font-size: clamp(34px, 5vw, 64px);
-      line-height: 0.98;
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height: 1.02;
       letter-spacing: 0;
     }
 
@@ -254,6 +385,65 @@
       margin-top: 4px;
       color: var(--muted);
       font-size: 12px;
+    }
+
+    .study-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .study-main {
+      min-width: 0;
+    }
+
+    .study-aside {
+      position: sticky;
+      top: 84px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .quick-panel {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-panel h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quick-list a,
+    .quick-list span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--panel-2);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .quick-list a:hover {
+      text-decoration: none;
+      border-color: var(--blue);
     }
 
     .progress-track {
@@ -356,6 +546,87 @@
 
     .card {
       padding: 18px;
+    }
+
+    .certificate-roadmap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .roadmap-panel {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .roadmap-panel h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .roadmap-panel p,
+    .roadmap-panel li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .roadmap-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .roadmap-list li {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel-2);
+    }
+
+    .roadmap-list b {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--blue);
+      font-size: 12px;
+    }
+
+    .course-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .course-tile {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .course-tile strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .course-tile span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .card h3 {
@@ -930,11 +1201,102 @@
       font-size: 12px;
     }
 
+    [data-theme="dark"] .app > aside {
+      background: #070b14;
+      border-right-color: #182234;
+    }
+
+    [data-theme="dark"] .hero-copy,
+    [data-theme="dark"] .dashboard-panel,
+    [data-theme="dark"] .module,
+    [data-theme="dark"] .note-panel,
+    [data-theme="dark"] .card,
+    [data-theme="dark"] .flashcard,
+    [data-theme="dark"] .reader-module,
+    [data-theme="dark"] .resource-tabs,
+    [data-theme="dark"] .roadmap-panel,
+    [data-theme="dark"] .quick-panel {
+      background: var(--panel);
+      border-color: var(--line);
+    }
+
+    [data-theme="dark"] .metric,
+    [data-theme="dark"] .module-notes,
+    [data-theme="dark"] .reader-side,
+    [data-theme="dark"] .concept-list li,
+    [data-theme="dark"] .diagram,
+    [data-theme="dark"] .resource-tabbar,
+    [data-theme="dark"] .empty,
+    [data-theme="dark"] .roadmap-list li,
+    [data-theme="dark"] .quick-list a,
+    [data-theme="dark"] .quick-list span {
+      background: var(--panel-2);
+      border-color: var(--line);
+    }
+
+    [data-theme="dark"] .button,
+    [data-theme="dark"] .search,
+    [data-theme="dark"] .segmented,
+    [data-theme="dark"] .module-header,
+    [data-theme="dark"] .reader-module > header,
+    [data-theme="dark"] .lesson,
+    [data-theme="dark"] .term,
+    [data-theme="dark"] .process-step,
+    [data-theme="dark"] .chart-choice,
+    [data-theme="dark"] .external-link,
+    [data-theme="dark"] .smart-cell,
+    [data-theme="dark"] .flow-cell,
+    [data-theme="dark"] .stakeholder-cell,
+    [data-theme="dark"] .formula,
+    [data-theme="dark"] .resource-tabbar button,
+    [data-theme="dark"] .practice li,
+    [data-theme="dark"] .course-tile {
+      background: #0f172a;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    [data-theme="dark"] .module-notes h4,
+    [data-theme="dark"] .lesson-list h4,
+    [data-theme="dark"] .card p,
+    [data-theme="dark"] .card li,
+    [data-theme="dark"] .module-header p,
+    [data-theme="dark"] .module-notes li,
+    [data-theme="dark"] .lesson small,
+    [data-theme="dark"] .reader-block p,
+    [data-theme="dark"] .reader-block li,
+    [data-theme="dark"] .reader-side li,
+    [data-theme="dark"] .term,
+    [data-theme="dark"] .process-step,
+    [data-theme="dark"] .chart-choice,
+    [data-theme="dark"] .smart-cell,
+    [data-theme="dark"] .flow-cell,
+    [data-theme="dark"] .stakeholder-cell,
+    [data-theme="dark"] .answer,
+    [data-theme="dark"] .practice li {
+      color: var(--muted);
+    }
+
+    [data-theme="dark"] .type.reading { background: rgba(74, 222, 128, 0.14); color: #86efac; }
+    [data-theme="dark"] .type.assignment { background: rgba(251, 191, 36, 0.14); color: #fcd34d; }
+    [data-theme="dark"] .type.plugin { background: rgba(167, 139, 250, 0.16); color: #c4b5fd; }
+    [data-theme="dark"] .chip.green { background: rgba(74, 222, 128, 0.14); color: #86efac; }
+    [data-theme="dark"] .chip.amber { background: rgba(251, 191, 36, 0.14); color: #fcd34d; }
+    [data-theme="dark"] .chip.gray { background: rgba(148, 163, 184, 0.14); color: #cbd5e1; }
+
     @media (max-width: 1080px) {
       .app { grid-template-columns: 1fr; }
-      aside {
+      .app > aside {
         position: relative;
         height: auto;
+      }
+      .study-layout,
+      .certificate-roadmap,
+      .course-matrix {
+        grid-template-columns: 1fr;
+      }
+      .study-aside {
+        position: static;
       }
       .hero,
       .module-body,
@@ -986,11 +1348,26 @@
       <div class="brand">
         <div class="brand-mark">DA</div>
         <div>
-          <h1>Google Data Analytics</h1>
-          <p>Personal revision system</p>
+          <h1>Analytics Revision Hub</h1>
+          <p>Google complete · IBM ready</p>
         </div>
       </div>
 
+      <p class="sidebar-label">Certificates</p>
+      <div class="certificate-switcher" aria-label="Certificate tracks">
+        <a class="cert-pill active" href="#overview">
+          <span class="cert-icon">G</span>
+          <span><strong>Google Data Analytics</strong><small>9-course reader complete</small></span>
+          <span class="tag">live</span>
+        </a>
+        <a class="cert-pill" href="#ibm-roadmap">
+          <span class="cert-icon">IBM</span>
+          <span><strong>IBM Data Analyst</strong><small>11-course track planned</small></span>
+          <span class="tag">next</span>
+        </a>
+      </div>
+
+      <p class="sidebar-label">Google Course Readers</p>
       <div class="course-stack" aria-label="Certificate courses">
         <a class="course-pill active" href="#course-reader"><span class="course-index">1</span><span>Foundations: Data, Data, Everywhere</span><span class="tag">live</span></a>
         <a class="course-pill active" href="#course-2-reader"><span class="course-index">2</span><span>Ask Questions to Make Data-Driven Decisions</span><span class="tag">live</span></a>
@@ -1003,8 +1380,18 @@
         <a class="course-pill active" href="#course-9-reader"><span class="course-index">9</span><span>Accelerate Your Job Search with AI</span><span class="tag">live</span></a>
       </div>
 
+      <p class="sidebar-label">IBM Track Preview</p>
+      <div class="course-stack" aria-label="IBM planned courses">
+        <a class="course-pill planned" href="#ibm-roadmap"><span class="course-index">1</span><span>Introduction to Data Analytics</span><span class="tag">planned</span></a>
+        <a class="course-pill planned" href="#ibm-roadmap"><span class="course-index">3</span><span>Excel and Cognos Visualization</span><span class="tag">viz</span></a>
+        <a class="course-pill planned" href="#ibm-roadmap"><span class="course-index">8</span><span>Data Visualization with Python</span><span class="tag">viz</span></a>
+        <a class="course-pill planned" href="#ibm-roadmap"><span class="course-index">11</span><span>Career Guide and Interview Prep</span><span class="tag">career</span></a>
+      </div>
+
+      <p class="sidebar-label">Page Sections</p>
       <nav aria-label="Page sections">
         <a href="#overview">Course overview</a>
+        <a href="#ibm-roadmap">IBM roadmap</a>
         <a href="#mental-model">Mental model</a>
         <a href="#course-reader">Course reader</a>
         <a href="#course-2-reader">Course 2 reader</a>
@@ -1023,6 +1410,14 @@
     </aside>
 
     <main>
+      <div class="top-strip" aria-label="Study workspace controls">
+        <div>
+          <strong>Certification study workspace</strong>
+          <span>Switch tracks, search lessons, revise readers, then test with flashcards.</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">☾ Dark mode</button>
+      </div>
+
       <section class="hero" id="overview">
         <div class="hero-copy">
           <h2>Revise the full certificate as a data analyst, not as a video watcher.</h2>
@@ -1064,6 +1459,9 @@
         </div>
         <button class="button" id="resetProgress" type="button">Reset checks</button>
       </div>
+
+      <div class="study-layout">
+        <div class="study-main">
 
       <section id="mental-model">
         <div class="section-title">
@@ -3252,6 +3650,42 @@
         </ol>
       </section>
 
+      <section id="ibm-roadmap">
+        <div class="section-title">
+          <div>
+            <h2>IBM Data Analyst Roadmap</h2>
+            <p>This is the next certificate area. The IBM track is ready as a managed space now; we can add its course readers one by one without disturbing the completed Google revision material.</p>
+          </div>
+        </div>
+        <div class="certificate-roadmap">
+          <article class="roadmap-panel">
+            <h3>How IBM will fit into this website</h3>
+            <p>IBM is currently an 11-course Coursera Professional Certificate. It overlaps with Google on fundamentals, cleaning, analysis, visualization, dashboards, capstone, and career prep, but adds more Excel, Cognos, Python, SQL, Plotly, Dash, and generative AI practice.</p>
+            <ul class="roadmap-list">
+              <li><b>1</b><span><strong>Separate certificate track.</strong> Google and IBM will stay in their own navigation groups so revision does not become messy.</span></li>
+              <li><b>2</b><span><strong>Visualization gets a shared master zone.</strong> IBM Course 3 and Course 8 will connect back to the visualization guide you already have.</span></li>
+              <li><b>3</b><span><strong>Source tabs stay separate.</strong> Coursera links, external links, readings, labs, and dashboards remain in resource tabs instead of cluttering the reader.</span></li>
+            </ul>
+          </article>
+          <article class="roadmap-panel">
+            <h3>IBM course sequence to add next</h3>
+            <div class="course-matrix">
+              <div class="course-tile"><strong>1. Introduction to Data Analytics</strong><span>Analytics process, roles, data structures, sources, and visualization basics.</span></div>
+              <div class="course-tile"><strong>2. Excel Basics for Data Analysis</strong><span>Data entry, formulas, cleaning, sorting, filtering, lookups, and pivot tables.</span></div>
+              <div class="course-tile"><strong>3. Excel and Cognos Dashboards</strong><span>Charts, treemaps, histograms, scatter plots, maps, storytelling, and Cognos dashboards.</span></div>
+              <div class="course-tile"><strong>4. Python for Data Science, AI and Development</strong><span>Python syntax, data structures, functions, APIs, web scraping, pandas, NumPy, and notebooks.</span></div>
+              <div class="course-tile"><strong>5. Python Project for Data Science</strong><span>Hands-on project using pandas, Beautiful Soup, Plotly, and dashboard thinking.</span></div>
+              <div class="course-tile"><strong>6. Databases and SQL for Data Science with Python</strong><span>Relational databases, DDL, DML, joins, views, transactions, stored procedures, and SQL with Python.</span></div>
+              <div class="course-tile"><strong>7. Data Analysis with Python</strong><span>Cleaning, normalization, binning, EDA, correlation, regression, SciPy, and model evaluation.</span></div>
+              <div class="course-tile"><strong>8. Data Visualization with Python</strong><span>Matplotlib, Seaborn, Folium, Plotly, Dash, maps, advanced charts, and interactive dashboards.</span></div>
+              <div class="course-tile"><strong>9. IBM Data Analyst Capstone Project</strong><span>Gather, wrangle, analyze, visualize, and present a real portfolio-grade data project.</span></div>
+              <div class="course-tile"><strong>10. Generative AI: Enhance your Data Analytics Career</strong><span>AI for preparation, analysis, visualization, storytelling, ethics, and prompt engineering.</span></div>
+              <div class="course-tile"><strong>11. Career Guide and Interview Preparation</strong><span>Role targeting, resume, portfolio, interview cycle, networking, and professional presentation.</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="next-review" class="note-panel">
         <h3>Suggested Review Plan</h3>
         <div class="two-col">
@@ -3273,6 +3707,37 @@
           </div>
         </div>
       </section>
+
+        </div>
+
+        <aside class="study-aside" aria-label="Study tools">
+          <div class="quick-panel">
+            <h3>Study Tools</h3>
+            <ul class="quick-list">
+              <li><a href="#course-6-reader">Visualization guide <span>Course 6</span></a></li>
+              <li><a href="#resources">Course resources <span>9 tabs</span></a></li>
+              <li><a href="#flashcards">Flashcards <span>66</span></a></li>
+              <li><a href="#practice">Practice prompts <span>64</span></a></li>
+            </ul>
+          </div>
+          <div class="quick-panel">
+            <h3>Certificate Status</h3>
+            <ul class="quick-list">
+              <li><span>Google reader <strong>Complete</strong></span></li>
+              <li><span>IBM reader <strong>Ready to add</strong></span></li>
+              <li><span>Dark mode <strong id="themeStatus">Light</strong></span></li>
+            </ul>
+          </div>
+          <div class="quick-panel">
+            <h3>Visualization Focus</h3>
+            <ul class="quick-list">
+              <li><a href="#course-6-reader">Chart choice <span>Guide</span></a></li>
+              <li><a href="#course-6-reader">Color and ethics <span>Guide</span></a></li>
+              <li><a href="#ibm-roadmap">IBM viz courses <span>3 + 8</span></a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
 
       <footer>
         Built as a personal revision aid from your enrolled Coursera course outline and transcript access. Coursera lesson content remains linked to Coursera; this page stores condensed study notes, not full transcripts.
@@ -4160,9 +4625,28 @@
     const emptyState = document.getElementById("emptyState");
     const progressBar = document.getElementById("progressBar");
     const progressText = document.getElementById("progressText");
+    const themeToggle = document.getElementById("themeToggle");
+    const themeStatus = document.getElementById("themeStatus");
     const storageKey = "gda-course-1-revision-checks";
+    const themeKey = "analytics-revision-theme";
     let activeFilter = "all";
     let checked = JSON.parse(localStorage.getItem(storageKey) || "{}");
+
+    function applyTheme(theme) {
+      const normalized = theme === "dark" ? "dark" : "light";
+      document.documentElement.dataset.theme = normalized;
+      localStorage.setItem(themeKey, normalized);
+      if (themeToggle) {
+        themeToggle.textContent = normalized === "dark" ? "☀ Light mode" : "☾ Dark mode";
+      }
+      if (themeStatus) {
+        themeStatus.textContent = normalized === "dark" ? "Dark" : "Light";
+      }
+    }
+
+    const savedTheme = localStorage.getItem(themeKey);
+    const preferredTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    applyTheme(savedTheme || preferredTheme);
 
     function lessonId(moduleId, lessonIndex) {
       return `m${moduleId}-l${lessonIndex}`;
@@ -4351,6 +4835,13 @@
     }
 
     searchInput.addEventListener("input", filterLessons);
+
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        applyTheme(nextTheme);
+      });
+    }
 
     document.querySelectorAll(".segmented button").forEach(button => {
       button.addEventListener("click", () => {
