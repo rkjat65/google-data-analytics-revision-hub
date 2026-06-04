@@ -3781,6 +3781,502 @@
         <div class="source-note">
           These IBM notes are not invented technical expansion. They are structured from Coursera's visible IBM course pages. Full Coursera transcripts/readings are not copied; source links stay attached to each course.
         </div>
+        <div class="note-panel">
+          <h3>IBM Deep Revision Pack</h3>
+          <p>This pack is written as revision material from the actual Coursera course/module outlines: what the module teaches, what labs ask you to practice, which tools are involved, and what you should be able to reproduce without reopening the course.</p>
+          <div class="reader">
+            <article class="reader-module">
+              <header>
+                <h3>Course 1 Deep Notes: Introduction to Data Analytics</h3>
+                <p>Source focus: data analytics definition, modern data ecosystem, data roles, structures, repositories, ETL, Big Data, gathering/wrangling, mining, visualizing, communicating, and careers.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>What the course wants you to understand</h4>
+                    <p>Data analytics is presented as an end-to-end process: understand a problem, identify data, gather and prepare it, analyze it for patterns, visualize or report findings, and support decisions. The course repeatedly separates job roles in the ecosystem: data engineers build and maintain pipelines/repositories; data analysts inspect data and answer business questions; data scientists create models and experiments; business analysts translate business needs; BI analysts create reporting and dashboard systems.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Repository and pipeline revision</h4>
+                    <ul>
+                      <li><strong>Database:</strong> structured storage often used by applications and operational systems.</li>
+                      <li><strong>Data warehouse:</strong> integrated, analysis-ready storage for reporting and business intelligence.</li>
+                      <li><strong>Data mart:</strong> smaller subject-area slice of warehouse-style data.</li>
+                      <li><strong>Data lake:</strong> broad repository for raw or varied-format data.</li>
+                      <li><strong>ETL:</strong> extract data from sources, transform it into usable structure/quality, load it into a target repository.</li>
+                      <li><strong>Big Data stack named by Coursera:</strong> Hadoop, HDFS, Hive, Spark.</li>
+                    </ul>
+                    <div class="pipeline-diagram">
+                      <div class="pipeline-step"><strong>Source</strong>Files, systems, databases, web data, internal/external sources.</div>
+                      <div class="pipeline-step"><strong>Extract</strong>Bring data from source into an analytics process.</div>
+                      <div class="pipeline-step"><strong>Transform</strong>Clean, format, structure, and prepare data.</div>
+                      <div class="pipeline-step"><strong>Load</strong>Move data into database, warehouse, mart, lake, or pipeline.</div>
+                      <div class="pipeline-step"><strong>Use</strong>Analyze, visualize, report, dashboard, communicate.</div>
+                    </div>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Explain ETL without using the words extract, transform, load.</li>
+                    <li>Tell the difference between a warehouse, mart, and lake.</li>
+                    <li>Map analyst, engineer, scientist, BA, and BI analyst responsibilities.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 2 Deep Notes: Excel Basics for Data Analysis</h3>
+                <p>Source focus: spreadsheet fundamentals, Excel interface, data entry/editing, formulas, import, cleaning, sorting, filtering, lookup functions, pivot tables, charts, and final hands-on project.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Excel as an analysis workflow</h4>
+                    <p>The Excel course is not only about cells. The visible Coursera outcomes frame Excel as a practical analysis tool: bring data into a workbook, inspect quality, clean formatting issues, use formulas to calculate new values, filter/sort to isolate records, use lookups to combine reference data, summarize with pivot tables, and communicate results with charts.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Revision sequence</h4>
+                    <div class="pipeline-diagram">
+                      <div class="pipeline-step"><strong>Import</strong>Open or import CSV/file data into Excel.</div>
+                      <div class="pipeline-step"><strong>Clean</strong>Fix missing values, duplicate records, formats, inconsistent text.</div>
+                      <div class="pipeline-step"><strong>Formula</strong>Create calculated fields and reusable checks.</div>
+                      <div class="pipeline-step"><strong>Analyze</strong>Sort, filter, lookup, pivot, summarize.</div>
+                      <div class="pipeline-step"><strong>Present</strong>Use tables/charts for final project output.</div>
+                    </div>
+                    <div class="technical-grid">
+                      <div class="technical-card"><strong>Data quality checks</strong>Duplicates, blanks, inconsistent case, date formats, numeric fields stored as text.</div>
+                      <div class="technical-card"><strong>Lookup thinking</strong>Choose a key, verify uniqueness, join reference values, check unmatched rows.</div>
+                      <div class="technical-card"><strong>Pivot thinking</strong>Rows are categories, values are measures, filters narrow scope, columns compare groups.</div>
+                    </div>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Describe when to use sort vs filter vs pivot.</li>
+                    <li>Name the lookup key before using lookup functions.</li>
+                    <li>List five cleaning checks before analysis.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 3 Deep Notes: Excel and Cognos Visualization</h3>
+                <p>Source focus: basic charts, pivot charts, advanced charts, Excel dashboards, IBM Cognos Analytics, optional Looker Studio, and final dashboard project.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>What to revise deeply</h4>
+                    <p>The course moves from single charts to dashboards. First, basic Excel charts communicate simple comparisons and trends. Then PivotTables and PivotCharts connect summarization with visualization. Advanced charts expand the visual vocabulary: treemaps for hierarchy/part-to-whole, scatter charts for relationships, histograms for distributions, filled maps for geography, and sparklines for compact trends. Dashboard modules then combine multiple visuals into an interactive presentation surface using Excel and Cognos Analytics.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Chart selection from Coursera topics</h4>
+                    <div class="technical-grid">
+                      <div class="technical-card"><strong>Line chart</strong>Use for trend over time.</div>
+                      <div class="technical-card"><strong>Bar chart</strong>Use for comparing categories.</div>
+                      <div class="technical-card"><strong>Pie chart</strong>Use only for simple part-to-whole with few categories.</div>
+                      <div class="technical-card"><strong>Scatter chart</strong>Use for relationship between two numeric variables.</div>
+                      <div class="technical-card"><strong>Histogram</strong>Use for distribution of one numeric variable.</div>
+                      <div class="technical-card"><strong>Filled map</strong>Use when geography is part of the question.</div>
+                    </div>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Dashboard construction logic</h4>
+                    <ul>
+                      <li>Start with the business question, not the chart type.</li>
+                      <li>Place headline metrics first, supporting trend/comparison charts next, and detail tables last.</li>
+                      <li>Use filters/interactivity only when they help the viewer answer follow-up questions.</li>
+                      <li>For Cognos, revise sign-up/navigation, visualization creation, simple dashboard creation, and advanced dashboard capabilities.</li>
+                    </ul>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Pick a chart for distribution, relationship, trend, category comparison, and geography.</li>
+                    <li>Explain what PivotCharts add over ordinary charts.</li>
+                    <li>Sketch a dashboard with KPI, trend, category breakdown, and table.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 4 Deep Notes: Python for Data Science, AI and Development</h3>
+                <p>Source focus: Python basics, data structures, programming fundamentals, file I/O, pandas, NumPy, APIs, HTTP requests, HTML/web scraping, JSON, and file formats.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Python learning path</h4>
+                    <p>The course sequence builds from syntax to data work. You first learn types, expressions, variables, and string operations. Then you learn containers: lists, tuples, sets, and dictionaries. Programming fundamentals add conditions, branching, loops, functions, exceptions, objects, and classes. The data module moves into reading/writing files, loading data with pandas, and numerical arrays with NumPy. The collection module covers REST APIs, HTTP requests, JSON, and web scraping.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Code Patterns To Practice From Course Topics</h4>
+                    <pre class="code-block"><code># Variables, types, expressions, strings
+course = "IBM Data Analyst"
+hours = 10
+message = f"{course}: {hours} hours planned"
+
+# Lists, tuples, sets, dictionaries
+skills = ["Python", "pandas", "NumPy"]
+record = {"tool": "pandas", "use": "load and manipulate tabular data"}
+
+# Branching, loops, functions
+def keep_skill(skill):
+    return skill.lower() in {"python", "pandas", "numpy"}
+
+selected = [skill for skill in skills if keep_skill(skill)]</code></pre>
+                    <pre class="code-block"><code># Files, pandas, NumPy, API pattern listed by Coursera topics
+import requests
+import pandas as pd
+import numpy as np
+
+response = requests.get("https://example.com/data.json")
+records = response.json()
+df = pd.DataFrame(records)
+values = np.array(df.select_dtypes("number"))</code></pre>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>When would you use a list, tuple, set, or dictionary?</li>
+                    <li>Write a function that cleans one text value.</li>
+                    <li>Explain API request → JSON → DataFrame.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 5 Deep Notes: Python Project for Data Science</h3>
+                <p>Source focus: project role, Python fundamentals, data structures, working with data, pandas, Beautiful Soup, Plotly, Jupyter, and dashboard creation.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Project mental model</h4>
+                    <p>This course is a bridge from learning Python to producing a project. Coursera describes the learner as playing a Data Scientist/Data Analyst role. The project uses Python fundamentals and data structures, then applies pandas for data manipulation, Beautiful Soup for web data extraction, Plotly for graphing, and Jupyter as the working environment. The deliverable is dashboard-oriented.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Reproducible project skeleton</h4>
+                    <pre class="code-block"><code># Project pattern based on listed tools: pandas, Beautiful Soup, Plotly, Jupyter
+import pandas as pd
+from bs4 import BeautifulSoup
+import plotly.express as px
+
+# 1. collect/load
+df = pd.read_csv("project_data.csv")
+
+# 2. inspect/wrangle
+df = df.drop_duplicates()
+
+# 3. visualize
+fig = px.line(df, x="date", y="value", title="Project trend")
+fig.show()</code></pre>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Explain the role of pandas, Beautiful Soup, and Plotly.</li>
+                    <li>Define the final dashboard story before plotting.</li>
+                    <li>Describe the project in business-task → data → method → output format.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 6 Deep Notes: Databases and SQL for Data Science with Python</h3>
+                <p>Source focus: SELECT/INSERT/UPDATE/DELETE, WHERE, COUNT, DISTINCT, LIMIT, DDL vs DML, CREATE/ALTER/DROP/load tables, patterns/ranges, ORDER/GROUP, functions, subqueries, joins, SQL with Python/Jupyter, views, ACID transactions, stored procedures, and final project.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>SQL progression</h4>
+                    <div class="pipeline-diagram">
+                      <div class="pipeline-step"><strong>Read</strong>SELECT, WHERE, COUNT, DISTINCT, LIMIT.</div>
+                      <div class="pipeline-step"><strong>Modify</strong>INSERT, UPDATE, DELETE.</div>
+                      <div class="pipeline-step"><strong>Define</strong>CREATE, ALTER, DROP, load tables.</div>
+                      <div class="pipeline-step"><strong>Analyze</strong>String patterns, ranges, ORDER, GROUP, functions, subqueries.</div>
+                      <div class="pipeline-step"><strong>Advanced</strong>Joins, views, ACID transactions, stored procedures, Python/Jupyter access.</div>
+                    </div>
+                  </div>
+                  <div class="reader-block">
+                    <h4>SQL revision patterns</h4>
+                    <pre class="code-block"><code>-- Basic retrieval, filtering, distinct values, and limits
+SELECT DISTINCT country
+FROM customers
+WHERE country IS NOT NULL
+LIMIT 20;
+
+-- Aggregation and ordering
+SELECT product_category, COUNT(*) AS orders
+FROM orders
+WHERE order_date BETWEEN '2025-01-01' AND '2025-12-31'
+GROUP BY product_category
+ORDER BY orders DESC;
+
+-- Joining tables
+SELECT o.order_id, c.customer_name, o.revenue
+FROM orders AS o
+INNER JOIN customers AS c
+  ON o.customer_id = c.customer_id;</code></pre>
+                    <pre class="code-block"><code>-- DDL pattern from course-listed CREATE/ALTER/DROP
+CREATE TABLE analyst_notes (
+  note_id INTEGER,
+  topic VARCHAR(100),
+  created_date DATE
+);
+
+ALTER TABLE analyst_notes ADD COLUMN status VARCHAR(30);
+DROP TABLE analyst_notes;</code></pre>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Classify SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP as DML/DDL.</li>
+                    <li>Write one query with WHERE, GROUP BY, ORDER BY, LIMIT.</li>
+                    <li>Explain why joins and subqueries are needed for multi-table analysis.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 7 Deep Notes: Data Analysis with Python</h3>
+                <p>Source focus: importing datasets, data wrangling, EDA, model development, model evaluation/refinement, final assignment, pandas, NumPy, SQLite, Matplotlib, Seaborn, SciPy, Scikit-learn, laptop/used-car/house-pricing datasets.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Actual course workflow</h4>
+                    <div class="pipeline-diagram">
+                      <div class="pipeline-step"><strong>Importing</strong>Understand datasets, packages, import/export; pandas, NumPy, SQLite.</div>
+                      <div class="pipeline-step"><strong>Wrangling</strong>Missing values, formatting, normalization, binning, categorical conversion.</div>
+                      <div class="pipeline-step"><strong>EDA</strong>Mean, median, mode, quartiles, grouping, Pearson correlation, chi-square.</div>
+                      <div class="pipeline-step"><strong>Modeling</strong>Simple/multiple/polynomial regression, pipelines, KDE performance plots.</div>
+                      <div class="pipeline-step"><strong>Evaluation</strong>Overfitting, underfitting, model selection, ridge regression, grid search.</div>
+                    </div>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Python analysis patterns</h4>
+                    <pre class="code-block"><code>import pandas as pd
+
+# Import and inspect
+df = pd.read_csv("laptop_pricing.csv")
+print(df.head())
+print(df.info())
+
+# Wrangling topics listed by Coursera
+df = df.drop_duplicates()
+df["price"] = pd.to_numeric(df["price"], errors="coerce")
+df["price"] = df["price"].fillna(df["price"].median())
+
+# EDA topics listed by Coursera
+summary = df.describe()
+grouped = df.groupby("brand")["price"].mean().sort_values(ascending=False)</code></pre>
+                    <pre class="code-block"><code># Model development/evaluation topics listed by Coursera
+from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import r2_score
+
+X = df[["screen_size", "ram"]]
+y = df["price"]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+model = LinearRegression().fit(X_train, y_train)
+pred = model.predict(X_test)
+score = r2_score(y_test, pred)</code></pre>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Explain normalization vs binning.</li>
+                    <li>Use Pearson correlation only for two continuous numerical variables.</li>
+                    <li>Explain overfitting, underfitting, ridge regression, and grid search.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 8 Deep Notes: Data Visualization with Python</h3>
+                <p>Source focus: visualization best practices, Matplotlib history/architecture, Canadian immigration dataset, line plots, area/histogram/bar/pie/box/scatter, waffle charts, word clouds, regression plots, Folium maps, choropleth maps, Plotly, Dash, interactive dashboards.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Visualization course path</h4>
+                    <p>This IBM course is more technical than the Excel/Cognos visualization course. It shifts visualization into Python code and libraries. The Coursera page names Matplotlib, Seaborn, Folium, Plotly, and Dash. It starts with visualization best practices and Matplotlib basics, then builds chart families, advanced visuals, maps, and interactive dashboard applications.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Library-to-output map</h4>
+                    <div class="technical-grid">
+                      <div class="technical-card"><strong>Matplotlib</strong>Line, area, histogram, bar, pie, box, scatter, direct plotting.</div>
+                      <div class="technical-card"><strong>Seaborn</strong>Regression-style statistical plotting and visual refinement.</div>
+                      <div class="technical-card"><strong>Folium</strong>Maps with markers and choropleth maps.</div>
+                      <div class="technical-card"><strong>Plotly</strong>Interactive charts including scatter, line, bar, bubble, pie, sunburst.</div>
+                      <div class="technical-card"><strong>Dash</strong>Interactive dashboards and app-style presentation.</div>
+                      <div class="technical-card"><strong>Advanced</strong>Waffle charts, word clouds, geospatial mapping.</div>
+                    </div>
+                    <pre class="code-block"><code>import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+
+# Matplotlib chart family from the course page
+df.groupby("year")["value"].sum().plot(kind="line")
+plt.title("Trend over time")
+plt.show()
+
+# Plotly interactive chart family from the course page
+fig = px.scatter(df, x="x_value", y="y_value", size="volume", color="category")
+fig.show()</code></pre>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Name which library you would use for maps, static plots, and dashboards.</li>
+                    <li>Pick charts for trend, distribution, relationship, composition, and geography.</li>
+                    <li>Explain why Dash is different from one static chart.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 9 Deep Notes: IBM Data Analyst Capstone Project</h3>
+                <p>Source focus: Stack Overflow Developer Survey, APIs, web scraping, duplicates, missing values, normalization, EDA, outliers, correlation, visualization chart families, Cognos/Looker dashboard, PowerPoint/PDF final presentation.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Capstone deliverable structure</h4>
+                    <p>Coursera describes a full professional workflow. The project starts with collecting job/survey data using API and scraping labs, then wrangles the dataset through duplicates, missing values, imputation, and normalization. EDA uses distributions, histograms, outlier handling, correlation, and a new DataFrame. Visualization labs require distribution, relationship, composition, and comparison charts. Dashboard work uses Cognos or Looker Studio. The final module requires a findings report/presentation with executive summary, insights, conclusion, and polished presentation format.</p>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Final project checklist from Coursera modules</h4>
+                    <ul>
+                      <li>Collect data using APIs and web scraping.</li>
+                      <li>Explore the raw dataset before cleaning.</li>
+                      <li>Find and remove duplicates.</li>
+                      <li>Find and impute missing values.</li>
+                      <li>Normalize data for consistent comparison.</li>
+                      <li>Analyze distributions and outliers.</li>
+                      <li>Find correlations among features.</li>
+                      <li>Create histograms, box plots, scatter plots, bubble plots, pie charts, stacked charts, line charts, and bar charts.</li>
+                      <li>Build dashboard sections for current technology usage, future technology trends, and demographics.</li>
+                      <li>Present findings using report structure and PowerPoint/PDF deliverable.</li>
+                    </ul>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Write the capstone story in five headings.</li>
+                    <li>Map each chart type to distribution, relationship, composition, or comparison.</li>
+                    <li>Explain what belongs in an executive summary.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 10 Deep Notes: Generative AI for Data Analytics</h3>
+                <p>Source focus: generative AI for data generation/augmentation, preparation, database querying, Q&A insights, visualization, dashboards, storytelling, responsible AI, industry considerations, final guided project.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Analytics uses from Coursera modules</h4>
+                    <div class="technical-grid">
+                      <div class="technical-card"><strong>Data generation</strong>Use GenAI tools to generate or augment data in lab contexts.</div>
+                      <div class="technical-card"><strong>Preparation</strong>Use GenAI support for cleaning/preparation workflows.</div>
+                      <div class="technical-card"><strong>Querying</strong>Use GenAI for database querying and SQL assistance.</div>
+                      <div class="technical-card"><strong>Insights</strong>Use Q&A models and GenAI-assisted insight extraction.</div>
+                      <div class="technical-card"><strong>Visualization</strong>Generate visually compelling representations and dashboard ideas.</div>
+                      <div class="technical-card"><strong>Storytelling</strong>Use GenAI to support data storytelling while checking accuracy and ethics.</div>
+                    </div>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Responsible use notes from module topics</h4>
+                    <ul>
+                      <li>Check generated outputs against source data.</li>
+                      <li>Do not accept invented values, fake correlations, or unverified recommendations.</li>
+                      <li>Use domain and privacy constraints before sending data to any tool.</li>
+                      <li>Review course-listed responsible AI and industry considerations, including healthcare case material.</li>
+                    </ul>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Give one GenAI use for data preparation, querying, visualization, and storytelling.</li>
+                    <li>Name two risks when using GenAI in analytics.</li>
+                    <li>Explain why human validation is still required.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+
+            <article class="reader-module">
+              <header>
+                <h3>Course 11 Deep Notes: Career Guide and Interview Preparation</h3>
+                <p>Source focus: data analyst roles, career path options, job search foundation, job listing research, resume, portfolio, interview cycle, interview types, professional presentation, cover letter, references, elevator pitch.</p>
+              </header>
+              <div class="reader-content">
+                <div class="reader-main">
+                  <div class="reader-block">
+                    <h4>Career preparation workflow</h4>
+                    <div class="pipeline-diagram">
+                      <div class="pipeline-step"><strong>Understand role</strong>Know data analyst and related job roles.</div>
+                      <div class="pipeline-step"><strong>Research jobs</strong>Study listings and target relevant roles.</div>
+                      <div class="pipeline-step"><strong>Prepare assets</strong>Resume, portfolio, cover letter, references.</div>
+                      <div class="pipeline-step"><strong>Practice pitch</strong>Elevator pitch and professional presentation.</div>
+                      <div class="pipeline-step"><strong>Interview</strong>Know interview cycle, interview types, preparation techniques.</div>
+                    </div>
+                  </div>
+                  <div class="reader-block">
+                    <h4>Portfolio/recruiter material checklist</h4>
+                    <ul>
+                      <li>Resume shows tools, actions, and evidence of analysis work.</li>
+                      <li>Portfolio contains projects with business task, data source, method, visual outputs, and conclusion.</li>
+                      <li>Cover letter connects your skills to the role instead of repeating the resume.</li>
+                      <li>References are gathered before they are urgently needed.</li>
+                      <li>Elevator pitch explains who you are, what data skills you bring, and what role you are targeting.</li>
+                    </ul>
+                  </div>
+                </div>
+                <aside class="reader-side">
+                  <h4>Self-Test</h4>
+                  <ul>
+                    <li>Write a 45-second elevator pitch.</li>
+                    <li>Explain one project using business task, method, finding, impact.</li>
+                    <li>List common interview types and how to prepare.</li>
+                  </ul>
+                </aside>
+              </div>
+            </article>
+          </div>
+        </div>
         <div class="reader">
           <article class="reader-module">
             <header>
